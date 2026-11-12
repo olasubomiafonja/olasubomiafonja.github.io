@@ -1,0 +1,1254 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Olasubomi Afonja</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Olasubomi Afonja, CFE. Lead Fraud Analyst with 7+ years in Nigerian fintech and digital lending.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: white editorial personal site. Five project hues run through the page: coral, indigo, amber, pink, teal.
+   Hero with photo on stacked colour tiles, proof tiles, rotating case-study deck, rule simulator, career rail, contact. */
+:root{
+  --bg:#ffffff; --paper:#f6f6fb; --surface:#ffffff; --sunk:#f3f3f9; --fg:#14142b; --muted:#5d5f78; --line:#e5e5ef;
+  --c1:#ff5a4f; --c1s:#ffeceb; --c2:#4f46e5; --c2s:#ecebff; --c3:#f29d0c; --c3s:#fff4df; --c4:#df2f7c; --c4s:#fde8f1; --c5:#0e9f9a; --c5s:#e0f6f5;
+  --accent:var(--c2); --accent-soft:var(--c2s);
+  --flag:#e5483d; --flag-soft:#ffeceb; --ok:#14935b;
+  --code-bg:#14142b; --code-fg:#e3e3f3; --code-k:#a5b4fc; --code-s:#fdba74; --code-c:#8486a6;
+  --shadow:0 24px 50px -24px rgba(31,27,92,.28);
+  --display:"Bricolage Grotesque",system-ui,sans-serif; --body:"Inter",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0e0f1d; --paper:#13142a; --surface:#181a33; --sunk:#1e2040; --fg:#eeeefa; --muted:#a3a5c2; --line:#2b2d4d;
+  --c1:#ff7a70; --c1s:#3a1d22; --c2:#8b85ff; --c2s:#242250; --c3:#ffb840; --c3s:#3a2c12; --c4:#ff5fa2; --c4s:#3d1a2d; --c5:#2fd0c9; --c5s:#103535;
+  --flag:#ff7a70; --flag-soft:#3a1d22; --ok:#4ad596; --code-bg:#0a0a16; --shadow:0 24px 50px -24px rgba(0,0,0,.7); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e0f1d; --paper:#13142a; --surface:#181a33; --sunk:#1e2040; --fg:#eeeefa; --muted:#a3a5c2; --line:#2b2d4d;
+  --c1:#ff7a70; --c1s:#3a1d22; --c2:#8b85ff; --c2s:#242250; --c3:#ffb840; --c3s:#3a2c12; --c4:#ff5fa2; --c4s:#3d1a2d; --c5:#2fd0c9; --c5s:#103535;
+  --flag:#ff7a70; --flag-soft:#3a1d22; --ok:#4ad596; --code-bg:#0a0a16; --shadow:0 24px 50px -24px rgba(0,0,0,.7); color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65}
+.band{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.inner{max-width:1140px;margin:0 auto}
+h1,h2,h3,h4{font-family:var(--display);margin:0;line-height:1.08;text-wrap:balance;letter-spacing:-.02em}
+p{margin:0}
+a{color:var(--c2)}
+:focus-visible{outline:3px solid var(--c2);outline-offset:3px;border-radius:4px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.mono{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+section.band{padding-block:96px}
+.sec-head{display:flex;flex-direction:column;gap:12px;max-width:66ch;margin-bottom:40px}
+.sec-head h2{font-size:clamp(32px,4.4vw,50px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17.5px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;font:600 15px var(--body);text-decoration:none;cursor:pointer;border:1.5px solid var(--fg);background:transparent;color:var(--fg);transition:transform .2s ease, background .2s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.solid{background:var(--fg);color:var(--bg)}
+.btn.sm{padding:8px 14px;font-size:13.5px}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+nav.band{position:sticky;top:env(safe-area-inset-top,0px);z-index:29;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:18px;color:var(--fg);text-decoration:none;letter-spacing:-.01em}
+.dots{display:inline-flex;gap:3px}
+.dots i{width:8px;height:8px;border-radius:50%;display:block}
+nav ul{display:flex;gap:26px;list-style:none;margin:0;padding:0}
+nav ul a{color:var(--muted);text-decoration:none;font-weight:500;font-size:14.5px}
+nav ul a:hover{color:var(--fg)}
+.nav-actions{display:flex;gap:8px;align-items:center}
+.icon-btn{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;display:grid;place-items:center;font-size:16px}
+@media (max-width:860px){nav ul{display:none}}
+
+/* hero */
+.hero .inner{display:grid;grid-template-columns:1.25fr .9fr;gap:64px;align-items:center;padding-block:72px 64px}
+.hero .inner>*{min-width:0}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{font-family:var(--mono);font-size:12px;padding:6px 12px;border-radius:999px;font-weight:500}
+.hero h1{font-size:clamp(44px,7vw,86px);font-weight:800;margin-top:22px;letter-spacing:-.035em;line-height:1}
+.hero h1 .mark{background:linear-gradient(transparent 62%,var(--c3) 62%,var(--c3) 92%,transparent 92%);padding-inline:4px}
+.hero .lede{font-size:19px;color:var(--muted);max-width:52ch;margin-top:24px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:36px;padding-top:24px;border-top:1px solid var(--line)}
+.facts div{display:flex;flex-direction:column}
+.facts b{font-family:var(--display);font-size:26px;font-weight:800}
+.facts span{font-size:13.5px;color:var(--muted)}
+.portrait{position:relative;justify-self:center;width:min(100%,380px);aspect-ratio:4/5;margin:20px 24px 28px 8px}
+.portrait .tile{position:absolute;inset:0;border-radius:22px}
+.portrait .t1{background:var(--c1);transform:translate(26px,22px) rotate(6deg)}
+.portrait .t2{background:var(--c3);transform:translate(-18px,14px) rotate(-5deg)}
+.portrait .t3{background:var(--c5);transform:translate(10px,-14px) rotate(2deg)}
+.portrait .frame{position:absolute;inset:0;border-radius:22px;overflow:hidden;background:linear-gradient(160deg,var(--c2s),var(--c4s));border:6px solid var(--surface);box-shadow:var(--shadow)}
+.portrait img{width:100%;height:100%;object-fit:cover;display:block;position:relative}
+.portrait .mono-gram{position:absolute;inset:0;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:110px;color:var(--c2);opacity:.5}
+.seal{position:absolute;right:-18px;bottom:-22px;width:104px;height:104px;border-radius:50%;background:var(--c2);color:#fff;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow);border:5px solid var(--surface)}
+.seal b{font-family:var(--display);font-size:28px;font-weight:800;line-height:1;display:block}
+.seal span{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;line-height:1.3;display:block;margin-top:3px}
+@media (max-width:860px){.hero .inner{grid-template-columns:1fr;gap:40px;padding-block:44px 48px}.portrait{justify-self:start;width:min(78%,320px)}}
+
+/* proof */
+.proof .inner{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.proof .tile{border-radius:18px;padding:22px 22px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.proof b{font-family:var(--display);font-size:clamp(30px,3.6vw,42px);font-weight:800;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1.05}
+.proof span{font-size:14px;line-height:1.4;color:var(--fg);opacity:.8}
+@media (max-width:820px){.proof .inner{grid-template-columns:1fr 1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:1.25fr 1fr;gap:56px}
+.about>*{min-width:0}
+.about .big{font-family:var(--display);font-size:clamp(24px,2.6vw,31px);font-weight:700;line-height:1.3;letter-spacing:-.015em}
+.about .prose{display:flex;flex-direction:column;gap:16px;margin-top:22px;color:var(--muted);font-size:17px;max-width:62ch}
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px;display:flex;flex-direction:column;gap:16px;align-self:start}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-size:13.5px;font-weight:500;padding:6px 12px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+
+/* work deck */
+.work{background:var(--paper)}
+.deck-wrap{display:grid;grid-template-columns:250px 1fr;gap:40px;align-items:start}
+.deck-wrap>*{min-width:0}
+.tabs{display:flex;flex-direction:column;gap:8px;position:sticky;top:90px}
+.tab{display:flex;gap:12px;align-items:center;text-align:left;padding:12px 14px;border-radius:14px;border:1.5px solid transparent;background:transparent;color:var(--muted);font:500 14.5px/1.3 var(--body);cursor:pointer}
+.tab .n{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font:600 12px var(--mono);color:#fff;background:var(--h)}
+.tab[aria-selected="true"]{background:var(--surface);border-color:var(--h);color:var(--fg);box-shadow:var(--shadow)}
+.deck-hint{font-size:13.5px;color:var(--muted);margin-top:10px;padding-inline:4px}
+.deck{display:grid;padding-bottom:80px;outline:none}
+.card{grid-area:1/1;background:var(--surface);border-radius:24px;border:1px solid var(--line);border-bottom:10px solid var(--h);box-shadow:var(--shadow);transform-origin:50% 100%;transition:transform .55s cubic-bezier(.2,.75,.2,1),box-shadow .3s;overflow:hidden;display:flex;flex-direction:column;--accent:var(--h);--accent-soft:var(--hs)}
+.card.front{cursor:pointer}
+.card-top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 28px;background:var(--hs)}
+.card-top .num{font:600 13px var(--mono);color:var(--h);letter-spacing:.06em}
+.card-top .tag{font:500 12px var(--mono);color:var(--fg);opacity:.75;letter-spacing:.06em;text-transform:uppercase}
+.card-body{padding:26px 28px 30px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.card-body>*{min-width:0}
+.card h3{font-size:clamp(26px,2.8vw,34px);font-weight:800;grid-column:1/-1}
+.facets{display:flex;flex-direction:column;gap:16px}
+.facet{display:grid;grid-template-columns:30px 1fr;gap:12px}
+.facet .ic{width:30px;height:30px;border-radius:9px;background:var(--hs);color:var(--h);display:grid;place-items:center}
+.facet .ic svg{width:16px;height:16px}
+.facet dt{font:600 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--h);margin-bottom:2px}
+.facet dd{margin:0;font-size:15px;line-height:1.55}
+.outcome{border-radius:16px;background:var(--hs);padding:16px 18px;display:flex;flex-direction:column;gap:10px}
+.outcome .kpis{display:flex;flex-wrap:wrap;gap:16px}
+.outcome .kpis div{display:flex;flex-direction:column}
+.outcome .kpis b{font-family:var(--display);font-size:26px;font-weight:800;color:var(--h);line-height:1.1;font-variant-numeric:tabular-nums}
+.outcome .kpis span{font-size:12.5px;color:var(--muted)}
+.outcome p{font-size:14.5px}
+.side{display:flex;flex-direction:column;gap:14px}
+.exhibit{background:var(--sunk);border:1px solid var(--line);border-radius:16px;padding:14px;overflow-x:auto}
+.exhibit .cap{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.exhibit svg{display:block;width:100%;height:auto;min-width:440px}
+.svg-text{font-family:var(--body);fill:var(--fg)}
+.svg-mono{font-family:var(--mono);fill:var(--muted)}
+details.code{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+details.code summary{cursor:pointer;padding:11px 14px;font:500 12.5px var(--mono);display:flex;justify-content:space-between;gap:10px;list-style:none}
+details.code summary::-webkit-details-marker{display:none}
+details.code summary::after{content:"Show code +";color:var(--h);white-space:nowrap}
+details.code[open] summary::after{content:"Hide −"}
+pre{margin:0;background:var(--code-bg);color:var(--code-fg);padding:16px;overflow-x:auto;font:12.5px/1.6 var(--mono)}
+.k{color:var(--code-k)} .s{color:var(--code-s)} .c{color:var(--code-c);font-style:italic}
+.deck-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:4px;position:relative;z-index:1;flex-wrap:wrap}
+.counter{font:600 14px var(--mono)}
+.counter span{color:var(--muted)}
+@media (max-width:980px){.deck-wrap{grid-template-columns:1fr}.tabs{position:static;flex-direction:row;overflow-x:auto;padding-bottom:6px}.tab{flex:none}.tab .t{display:none}.deck-hint{display:none}}
+@media (max-width:760px){.card-body{grid-template-columns:1fr;padding:22px 20px 26px}.card-top{padding:14px 20px}}
+.note{margin-top:28px;font-size:14px;color:var(--muted)}
+
+/* simulator */
+.sim{display:grid;grid-template-columns:1fr 1.15fr;gap:40px;align-items:start}
+.sim>*{min-width:0}
+.sim-box{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:20px}
+.sim-row{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.sim-row b{font-family:var(--display);font-size:34px;font-weight:800;font-variant-numeric:tabular-nums}
+input[type=range]{width:100%;accent-color:var(--c2)}
+.pairs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.pairs div{border-radius:12px;padding:10px;border:1.5px solid var(--line);display:flex;flex-direction:column;gap:2px;font-size:12.5px;transition:background .2s,border-color .2s}
+.pairs b{font:600 15px var(--mono)}
+.pairs .lab{color:var(--muted)}
+.pairs .hit-f{background:var(--c5s);border-color:var(--c5)}
+.pairs .hit-g{background:var(--c1s);border-color:var(--c1)}
+.pairs .miss{border-style:dashed;border-color:var(--c3)}
+.sim-out{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sim-out div{border-radius:14px;padding:12px;display:flex;flex-direction:column}
+.sim-out b{font-family:var(--display);font-size:28px;font-weight:800}
+.sim-out span{font-size:12.5px}
+.sim-verdict{font-size:15px;font-weight:500;min-height:3.2em}
+.method{display:flex;flex-direction:column;gap:14px}
+.step{display:grid;grid-template-columns:46px 1fr;gap:16px;padding:18px;border-radius:18px;background:var(--paper);border:1px solid var(--line)}
+.step .n{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;font-family:var(--display);font-weight:800;font-size:20px;color:#fff}
+.step h4{font-size:19px;margin-bottom:4px}
+.step p{color:var(--muted);font-size:15px}
+@media (max-width:900px){.sim{grid-template-columns:1fr}.pairs{grid-template-columns:repeat(2,1fr)}}
+
+/* experience */
+.exp{background:var(--paper)}
+.rail{display:flex;border-radius:14px;overflow:hidden;height:56px;margin-bottom:12px;border:1px solid var(--line)}
+.rail div{display:flex;align-items:center;padding:0 12px;color:#fff;font:600 12.5px var(--body);white-space:nowrap;overflow:hidden;min-width:0}
+.rail-years>span{min-width:0;overflow:hidden;white-space:nowrap;padding-left:2px}
+.rail-years{display:flex;font:500 12px var(--mono);color:var(--muted);margin-bottom:44px}
+.jobs{display:grid;grid-template-columns:1.35fr 1fr;gap:20px}
+.jobs>*{min-width:0}
+.job{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:26px;display:flex;flex-direction:column;gap:14px;border-top:8px solid var(--h)}
+.job .co{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+.job .co h3{font-size:24px;font-weight:800}
+.job .when{font:500 12.5px var(--mono);color:var(--muted)}
+.job h4{font-size:17px;font-weight:700;color:var(--h)}
+.job ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:15px;color:var(--muted)}
+.ladder{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;align-items:end}
+.ladder div{border-radius:12px;padding:10px 12px;background:var(--hs);display:flex;flex-direction:column;gap:2px}
+.ladder div:nth-child(1){min-height:64px}.ladder div:nth-child(2){min-height:84px}.ladder div:nth-child(3){min-height:106px;background:var(--h);color:#fff}
+.ladder b{font-size:14px;font-family:var(--display);line-height:1.2}
+.ladder span{font:500 11.5px var(--mono);opacity:.8}
+.ladder-cap{font:500 12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.stack{display:flex;flex-direction:column;gap:20px}
+details.more summary{cursor:pointer;font:600 13.5px var(--body);color:var(--h)}
+details.more ul{margin-top:10px}
+@media (max-width:900px){.jobs{grid-template-columns:1fr}.rail div{font-size:0;padding:0}}
+
+/* expertise */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.skill{border-radius:20px;padding:22px;background:var(--hs);display:flex;flex-direction:column;gap:6px}
+.skill b{font-family:var(--display);font-size:19px;font-weight:700}
+.skill p{font-size:14.5px;color:var(--fg);opacity:.8}
+@media (max-width:860px){.skills{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.skills{grid-template-columns:1fr}}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.cred{display:flex;gap:16px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:20px}
+.cred .badge{flex:none;width:58px;height:58px;border-radius:16px;display:grid;place-items:center;font-family:var(--display);font-weight:800;color:#fff;font-size:15px}
+.cred b{font-family:var(--display);font-size:18px;display:block}
+.cred span{color:var(--muted);font-size:14px}
+@media (max-width:640px){.creds{grid-template-columns:1fr}}
+
+/* contact */
+.contact .box{background:var(--c2);color:#fff;border-radius:32px;padding:clamp(28px,5vw,60px);display:grid;grid-template-columns:1.1fr 1fr;gap:40px;position:relative;overflow:hidden}
+.contact .box>*{min-width:0;position:relative}
+.contact .blob{position:absolute;border-radius:50%;opacity:.9}
+.contact h2{font-size:clamp(36px,5.5vw,64px);font-weight:800;line-height:1}
+.contact p{margin-top:16px;font-size:17.5px;opacity:.85;max-width:44ch}
+.contact .rows{display:flex;flex-direction:column;gap:12px;align-self:end}
+.crow{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:12px 14px;flex-wrap:wrap}
+.crow .l{font:500 11.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;opacity:.75;width:74px}
+.crow .v{flex:1;font-weight:600;font-size:16px;color:#fff;text-decoration:none;overflow-wrap:anywhere;min-width:0}
+.crow button{background:#fff;color:var(--c2);border:0;border-radius:999px;padding:6px 12px;font:600 12px var(--body);cursor:pointer}
+@media (max-width:860px){.contact .box{grid-template-columns:1fr}}
+footer.band{padding-block:28px;color:var(--muted);font-size:13.5px}
+footer .inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* v4: card layout with full-width snapshots */
+.card{align-self:start}
+.card-body{display:flex;flex-direction:column;gap:24px}
+.card-body h3{grid-column:auto}
+.facets{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 24px;margin:0}
+.facets>*{min-width:0}
+.facet.wide{grid-column:span 2}
+.facet.out{grid-column:1/-1;background:var(--hs);border-radius:16px;padding:14px 16px}
+.facet.out .ic{background:var(--surface)}
+.facet .kpis{display:flex;flex-wrap:wrap;gap:22px;margin:6px 0 4px}
+.facet .kpis div{display:flex;flex-direction:column}
+.facet .kpis b{font-family:var(--display);font-size:26px;font-weight:800;color:var(--h);line-height:1.1;font-variant-numeric:tabular-nums}
+.facet .kpis span{font-size:12.5px;color:var(--muted)}
+@media (max-width:900px){.facets{grid-template-columns:1fr 1fr}.facet.wide{grid-column:1/-1}}
+@media (max-width:600px){.facets{grid-template-columns:1fr}}
+
+.snaps{display:flex;flex-direction:column;gap:10px}
+.snap-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.snap-tabs{display:flex;flex-wrap:wrap;gap:6px}
+.snap-tabs button{border:1.5px solid var(--line);background:var(--surface);color:var(--muted);font:500 12.5px var(--body);padding:6px 12px;border-radius:999px;cursor:pointer}
+.snap-tabs button[aria-selected="true"]{background:var(--h);border-color:var(--h);color:#fff}
+.browser{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 10px 30px -18px rgba(20,20,43,.35)}
+.browser .bar{display:flex;align-items:center;gap:10px;padding:8px 12px;background:var(--sunk);border-bottom:1px solid var(--line)}
+.browser .bar i{width:9px;height:9px;border-radius:50%;display:block}
+.browser .url{flex:1;font:500 11.5px var(--mono);color:var(--muted);background:var(--surface);border-radius:6px;padding:4px 10px;min-width:0;overflow:hidden;white-space:nowrap}
+.screen-scroll{overflow-x:auto}
+.screen{min-width:760px;font-size:12.5px;line-height:1.45;color:var(--fg)}
+.screen[hidden]{display:none!important}
+
+/* mock app shell */
+.app{display:grid;grid-template-columns:150px 1fr;min-height:430px}
+.app aside{background:#17183a;color:#c9cbe8;padding:14px 10px;display:flex;flex-direction:column;gap:2px}
+.app aside .logo{font-family:var(--display);font-weight:800;color:#fff;font-size:15px;padding:2px 8px 12px}
+.app aside .logo span{color:var(--c3)}
+.app aside a{display:block;padding:7px 9px;border-radius:7px;color:inherit;text-decoration:none;font-size:12.5px}
+.app aside a.on{background:rgba(255,255,255,.12);color:#fff;font-weight:600}
+.app main{padding:16px 18px;display:flex;flex-direction:column;gap:12px;background:var(--paper);min-width:0}
+.app .top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.app .top h5{margin:0;font-family:var(--display);font-size:18px;font-weight:800}
+.app .top .who{font:500 11px var(--mono);color:var(--muted)}
+.k4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.kc{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.kc small{display:block;color:var(--muted);font-size:11px}
+.kc b{font-family:var(--display);font-size:22px;font-weight:800;display:block;line-height:1.2}
+.kc em{font-style:normal;font-size:11px;font-weight:600}
+.up{color:var(--ok)} .dn{color:var(--flag)}
+.row2{display:grid;grid-template-columns:1.4fr 1fr;gap:10px}
+.pane{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px;min-width:0}
+.pane h6{margin:0 0 8px;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.bars{display:flex;align-items:flex-end;gap:6px;height:110px;padding-top:6px;border-bottom:1px solid var(--line)}
+.bars div{flex:1;border-radius:4px 4px 0 0;background:var(--c2);opacity:.85}
+.bars div.hi{background:var(--c1);opacity:1}
+.bx{display:flex;justify-content:space-between;font:500 10px var(--mono);color:var(--muted);margin-top:4px}
+.list{display:flex;flex-direction:column;gap:7px}
+.list div{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.meter{flex:none;width:70px;height:6px;border-radius:3px;background:var(--sunk);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--c3)}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th{text-align:left;font:600 10.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:1px solid var(--line)}
+table.t td{padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap}
+.pl{display:inline-block;font:600 10.5px var(--body);padding:2px 8px;border-radius:999px}
+.p-hi{background:var(--c1s);color:var(--c1)} .p-md{background:var(--c3s);color:#a86400} .p-lo{background:var(--c5s);color:var(--c5)} .p-in{background:var(--c2s);color:var(--c2)} .p-gr{background:var(--sunk);color:var(--muted)}
+.score{font:600 12px var(--mono)}
+.toggle{display:inline-block;width:28px;height:16px;border-radius:8px;background:var(--c5);position:relative;vertical-align:middle}
+.toggle::after{content:"";position:absolute;right:2px;top:2px;width:12px;height:12px;border-radius:50%;background:#fff}
+.toggle.off{background:var(--line)} .toggle.off::after{right:auto;left:2px}
+.cond{display:flex;flex-direction:column;gap:6px}
+.cond div{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.cond .kw{font:700 10.5px var(--mono);color:var(--c2);width:38px}
+.cond code{font:500 11.5px var(--mono);background:var(--sunk);border:1px solid var(--line);border-radius:6px;padding:3px 7px}
+.then{background:var(--c1s);border-radius:8px;padding:8px 10px;font-weight:600;color:var(--c1)}
+.sim-line{display:flex;gap:14px;flex-wrap:wrap;background:var(--c5s);border-radius:8px;padding:8px 10px;font-size:12px}
+.ai{background:linear-gradient(160deg,var(--c2s),var(--c4s));border:1px solid var(--line);border-radius:10px;padding:12px;display:flex;flex-direction:column;gap:9px}
+.ai h6{color:var(--c2)}
+.ai .blk{background:var(--surface);border-radius:8px;padding:8px 10px}
+.ai .blk b{display:block;font-size:11px;font-family:var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:2px}
+.ai .btns{display:flex;gap:6px;flex-wrap:wrap}
+.ai .btns span{font-weight:600;font-size:11.5px;padding:5px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--line)}
+.ai .btns span.go{background:var(--c2);color:#fff;border-color:var(--c2)}
+.tl{display:flex;flex-direction:column;gap:8px;border-left:2px solid var(--line);padding-left:12px}
+.tl div{position:relative}
+.tl div::before{content:"";position:absolute;left:-17px;top:4px;width:8px;height:8px;border-radius:50%;background:var(--c2)}
+.tl small{color:var(--muted);font-family:var(--mono);font-size:10.5px}
+
+/* face review mock */
+.fr{padding:16px;background:var(--surface)}
+.fr h5{margin:0 0 12px;font-family:var(--display);font-size:20px;font-weight:800}
+.fr-grid{display:grid;grid-template-columns:1fr 1fr .8fr;gap:12px}
+.fr-col{border:1px solid var(--line);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.fr-col header{padding:8px 12px;font-weight:700;color:#fff}
+.fr-col .bd{padding:10px 12px;display:flex;flex-direction:column;gap:6px}
+.fr-col svg.pt{width:100%;height:auto;border-radius:8px;display:block}
+.fr-col .meta{font-size:11.5px;color:var(--muted);font-family:var(--mono)}
+.fr-res .bd{gap:8px}
+.fr-res .opt{background:#1d1e33;color:#fff;border-radius:8px;padding:9px 10px;font-weight:600;font-size:12px;text-align:center}
+.fr-res .or{text-align:center;color:var(--muted);font:500 10.5px var(--mono)}
+.simbadge{align-self:flex-start;background:var(--c1s);color:var(--c1);font:700 11.5px var(--mono);padding:3px 9px;border-radius:999px}
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.flow>div{border-radius:14px;padding:12px 14px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:4px;position:relative}
+.flow>div b{font-family:var(--display);font-size:15px}
+.flow>div span{font-size:13px;color:var(--muted)}
+.flow>div .st{font:700 11px var(--mono);color:var(--h)}
+@media (max-width:760px){.flow{grid-template-columns:1fr 1fr}}
+.res-explain{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.res-explain div{border-radius:12px;padding:12px;background:var(--hs);font-size:13.5px}
+.res-explain b{display:block;font-size:13.5px;margin-bottom:2px}
+@media (max-width:760px){.res-explain{grid-template-columns:1fr}}
+
+/* profile mock (face swap) */
+.pf{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;padding:16px;background:var(--surface)}
+.pf table.kv{width:100%;border-collapse:collapse;font-size:12px}
+.pf table.kv td{border:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.pf table.kv td:first-child{font-weight:600;width:42%;background:var(--paper)}
+.pf .sel{display:flex;flex-direction:column;gap:8px}
+.pf svg.pt{width:100%;height:auto;border-radius:8px;display:block}
+.tagg{display:inline-block;font:700 10.5px var(--body);padding:2px 7px;border-radius:4px;color:#fff}
+.alertbar{grid-column:1/-1;border-radius:10px;background:var(--c4s);border:1.5px solid var(--c4);padding:10px 12px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.alertbar b{color:var(--c4)}
+
+/* exec summary mock */
+.ex{padding:20px 22px;background:var(--surface)}
+.ex .ey{font:700 12px var(--body);color:var(--c2);letter-spacing:.04em;text-transform:uppercase}
+.ex h5{margin:6px 0 2px;font-family:var(--display);font-size:24px;font-weight:800}
+.ex .per{color:var(--muted);font-size:14px;margin-bottom:14px}
+.ex-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.ex-grid div{border:1.5px solid var(--fg);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-height:112px}
+.ex-grid b{font-family:var(--display);font-size:26px;font-weight:800;line-height:1.1}
+.ex-grid span{font-size:12.5px}
+.ex-grid em{font-style:normal;font-weight:700;font-size:12px;margin-top:auto}
+.ex-strip{margin-top:12px;background:var(--sunk);border:1px solid var(--line);border-radius:10px;padding:10px 14px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:13px}
+.ex-strip b{font-family:var(--display);font-size:18px}
+.ex-foot{margin-top:12px;display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted);border-top:1px solid var(--line);padding-top:8px}
+
+/* watchlist dashboard */
+.donut-wrap{display:flex;gap:14px;align-items:center}
+.legend{display:flex;flex-direction:column;gap:5px;font-size:12px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:6px}
+.dropzone{border:2px dashed var(--c2);border-radius:10px;padding:12px;text-align:center;background:var(--c2s);color:var(--c2);font-weight:600}
+
+
+.status{display:inline-flex;align-items:center;gap:6px;font:600 11.5px var(--mono);letter-spacing:.05em;text-transform:uppercase;color:var(--ok);background:color-mix(in srgb,var(--ok) 12%,transparent);padding:5px 10px;border-radius:999px;align-self:flex-start}
+.status::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--ok)}
+.title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.roles{display:grid;grid-template-columns:1.3fr 1fr;gap:10px}
+.roles>div{border-radius:14px;padding:12px 14px;border:1px solid var(--line);font-size:14px;min-width:0}
+.roles>div.me{background:var(--hs);border-color:transparent}
+.roles b{display:block;font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;margin-bottom:3px}
+.roles .me b{color:var(--h)} .roles .eng b{color:var(--muted)}
+@media (max-width:700px){.roles{grid-template-columns:1fr}}
+.lead-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.lead{border-radius:22px;padding:24px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:10px;border-left:8px solid var(--h)}
+.lead h3{font-size:22px;font-weight:800}
+.lead p{color:var(--muted);font-size:15.5px}
+.lead ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:5px}
+.big-n{display:flex;gap:22px;flex-wrap:wrap}
+.big-n div{display:flex;flex-direction:column}
+.big-n b{font-family:var(--display);font-size:30px;font-weight:800;color:var(--h);line-height:1.1}
+.big-n span{font-size:12.5px;color:var(--muted)}
+@media (max-width:820px){.lead-grid{grid-template-columns:1fr}}
+.aml{background:var(--paper)}
+.aml-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.aml-grid>div{border-radius:20px;padding:22px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:6px;border-top:6px solid var(--h)}
+.aml-grid b{font-family:var(--display);font-size:32px;font-weight:800;color:var(--h);line-height:1.05}
+.aml-grid strong{font-family:var(--display);font-size:17px}
+.aml-grid p{font-size:14.5px;color:var(--muted)}
+@media (max-width:900px){.aml-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.aml-grid{grid-template-columns:1fr}}
+.sample-tag{display:inline-block;font:700 11px var(--mono);letter-spacing:.08em;background:var(--c3);color:#1d1e33;padding:3px 8px;border-radius:4px;margin-left:8px;vertical-align:middle}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="face" viewBox="0 0 60 60"><rect width="60" height="60" rx="6" fill="currentColor" opacity=".18"/><circle cx="30" cy="24" r="11" fill="currentColor" opacity=".75"/><path d="M10 56c2-12 10-18 20-18s18 6 20 18z" fill="currentColor" opacity=".75"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2.5 20c.6-3.6 3.2-5.5 6.5-5.5s5.9 1.9 6.5 5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17" cy="9" r="2.6" fill="none" stroke="currentColor" stroke-width="2"/><path d="M17.5 14.2c2.3.4 3.7 2 4 4.6" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.4 1.1 2.2h5c0-.8.4-1.6 1.1-2.2A6 6 0 0 0 12 3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24"><path d="M14.5 6.5a4 4 0 0 0 5 5l-8 8a2.1 2.1 0 0 1-3-3l8-8a4 4 0 0 0-2 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 7.5 12 3l9 4.5v9L12 21l-9-4.5z M3 7.5l9 4.5 9-4.5 M12 12v9" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <g id="f-w1"><rect x="52" y="80" width="16" height="24" fill="#6a3f27"/><ellipse cx="37" cy="62" rx="4" ry="6" fill="#6a3f27"/><ellipse cx="83" cy="62" rx="4" ry="6" fill="#6a3f27"/><ellipse cx="60" cy="60" rx="23" ry="28" fill="#7b4a2e"/><path d="M45 52q6-4 12-1M63 51q6-3 12 1" stroke="#1d120c" stroke-width="2.2" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="59" rx="3.6" ry="2.3" fill="#fff"/><ellipse cx="69" cy="59" rx="3.6" ry="2.3" fill="#fff"/><circle cx="51" cy="59" r="1.8" fill="#1d120c"/><circle cx="69" cy="59" r="1.8" fill="#1d120c"/><path d="M60 61q-2 8-5 11q5 2.5 10 0q-3-3-5-11" fill="#663b24"/><path d="M50 77q10 6 20 0q-10 3.5-20 0" fill="#5a2a22"/></g>
+    <g id="f-m1"><rect x="52" y="80" width="16" height="24" fill="#4c2e1e"/><ellipse cx="38" cy="62" rx="4" ry="6" fill="#4c2e1e"/><ellipse cx="82" cy="62" rx="4" ry="6" fill="#4c2e1e"/><ellipse cx="60" cy="60" rx="22" ry="29" fill="#5a3624"/><path d="M48 42q12-3 24 0M50 46q10-2 20 0" stroke="#3f2618" stroke-width="1.2" fill="none" opacity=".7"/><path d="M45 52q6-3 12 0M63 52q6-3 12 0" stroke="#bdbdbd" stroke-width="2.4" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="59" rx="3.2" ry="2" fill="#f3e9e3"/><ellipse cx="69" cy="59" rx="3.2" ry="2" fill="#f3e9e3"/><circle cx="51" cy="59" r="1.6" fill="#140d08"/><circle cx="69" cy="59" r="1.6" fill="#140d08"/><path d="M47 63q4 2 8 0M65 63q4 2 8 0" stroke="#3f2618" stroke-width="1" fill="none"/><path d="M60 61q-2 9-6 12q6 2.5 12 0q-4-3-6-12" fill="#4a2c1c"/><path d="M51 79q9 3 18 0" stroke="#3a1f16" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M45 74q-2 6 2 10M75 74q2 6-2 10" stroke="#3f2618" stroke-width="1" fill="none" opacity=".7"/></g>
+    <g id="f-m2"><rect x="52" y="80" width="16" height="24" fill="#3e2416"/><ellipse cx="37" cy="62" rx="4" ry="6" fill="#3e2416"/><ellipse cx="83" cy="62" rx="4" ry="6" fill="#3e2416"/><ellipse cx="60" cy="60" rx="23" ry="30" fill="#4b2d1c"/><path d="M45 52q6-3 12-1M63 51q6-2 12 1" stroke="#0d0805" stroke-width="2.6" fill="none" stroke-linecap="round"/><ellipse cx="51" cy="60" rx="3.6" ry="2.3" fill="#fff"/><ellipse cx="69" cy="60" rx="3.6" ry="2.3" fill="#fff"/><circle cx="51" cy="60" r="1.8" fill="#0d0805"/><circle cx="69" cy="60" r="1.8" fill="#0d0805"/><path d="M60 62q-2 8-6 11q6 2.5 12 0q-4-3-6-11" fill="#3e2416"/><path d="M52 76q8-3 16 0" stroke="#0d0805" stroke-width="2" fill="none"/><path d="M51 79q9 4 18 0q-9 2-18 0" fill="#4a2018"/><path d="M54 84q6 5 12 0l-1 6q-5 4-10 0z" fill="#0d0805"/></g>
+    <g id="h-puff"><circle cx="60" cy="22" r="20" fill="#16100c"/><path d="M37 58C34 30 86 30 83 58C78 41 42 41 37 58Z" fill="#16100c"/></g>
+    <g id="h-braids-back"><path d="M35 50C30 80 31 110 37 132L46 130C41 102 41 76 44 54Z" fill="#8a6440"/><path d="M85 50C90 80 89 110 83 132L74 130C79 102 79 76 76 54Z" fill="#8a6440"/><path d="M38 62v62M42 60v64M82 62v62M78 60v64" stroke="#5c4128" stroke-width="1" opacity=".7"/></g>
+    <g id="h-braids"><path d="M36 56C34 29 86 29 84 56C80 39 40 39 36 56Z" fill="#2a1d14"/><path d="M44 38l2 10M52 34l1 10M60 33v10M68 34l-1 10M76 38l-2 10" stroke="#4a3424" stroke-width="1.2"/></g>
+    <g id="h-short"><path d="M37 54C35 27 85 27 83 54C80 39 40 39 37 54Z" fill="#140d08"/></g>
+    <g id="h-grey"><path d="M38 52C38 31 82 31 82 52C78 40 42 40 38 52Z" fill="#d6d6d6"/><path d="M38 52q-1 6 1 12M82 52q1 6-1 12" stroke="#d6d6d6" stroke-width="3" fill="none"/></g>
+    <path id="body" d="M10 150C14 112 36 99 60 99S106 112 110 150Z" fill="currentColor"/>
+  </defs>
+</svg>
+
+<nav class="band" aria-label="Main">
+  <div class="inner">
+    <a class="brand" href="#top"><span class="dots" aria-hidden="true"><i style="background:var(--c1)"></i><i style="background:var(--c3)"></i><i style="background:var(--c2)"></i></span>Olasubomi Afonja</a>
+    <ul>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#approach">Approach</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
+      <a class="btn solid sm" href="#contact">Get in touch</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero band" id="top">
+  <div class="inner">
+    <div>
+      <div class="pills">
+        <span class="pill" style="background:var(--c2s);color:var(--c2)">Certified Fraud Examiner</span>
+        <span class="pill" style="background:var(--c1s);color:var(--c1)">Fraud risk leader</span>
+        <span class="pill" style="background:var(--c5s);color:var(--c5)">Lagos, Nigeria</span>
+      </div>
+      <h1>I stop fraud <span class="mark">before</span> the money moves.</h1>
+      <p class="lede">I've spent seven years fighting fraud in Nigerian fintech and digital lending. I find the gaps fraudsters use, design controls that close them, ship those controls with product and engineering, and lead the teams who run them.</p>
+      <div class="ctas">
+        <a class="btn solid" href="#work">See case studies</a>
+        <a class="btn" href="https://linkedin.com/in/olasubomi-afonja" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a class="btn" href="Olasubomi-Afonja-CV.pdf" download>Download CV ↓</a>
+      </div>
+      <div class="facts">
+        <div><b>7+ years</b><span>fraud &amp; financial crime</span></div>
+        <div><b>4 companies</b><span>lending &amp; fintech</span></div>
+        <div><b>60+</b><span>investigators led, 120 at peak</span></div>
+      </div>
+    </div>
+    <div class="portrait">
+      <span class="tile t1" aria-hidden="true"></span><span class="tile t2" aria-hidden="true"></span><span class="tile t3" aria-hidden="true"></span>
+      <div class="frame">
+        <span class="mono-gram" aria-hidden="true">OA</span>
+        <img src="data:image/jpeg;base64,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AAAABKOCIAGHJAILOKMBGDBBPAAIAAPDBAAIIIECPNMCEAAAAAAPPAMEIIHPBMLABFNFPMAAACBIABKAAIANPNDCMIDECPPPLPBBMONKFNALBCJOGEDDCDBAIDPACAAAAAIIKAFACIMABACKCDHFDIEIHAJCCJDDFLIJEMAAEMAAAAALAENIIIDOGKNEIFOAGLIOGIBEPMKIEBPAEIGMMIAAABIAKFPPAAAAMAIHNDJCEMBBNOCJGEKJNKAAAFDAAAEACFICAAAALAAJBEAABCAAFEFFOHIOJCDNFFAAAAAAKAAAAEJICAAABMCAAMABGKNAAEOHPOOIHFFENJMABAAAAIDABAEGIADAJMDMNAMBHCMIAAAEKGCBFGJDDDBECIHAECGNFOCJCHIFKGAAMLGCIKBAACAABNFBJOIMLJMAGCMPFFAAFAAALNIBLMHCDAIFBAJCIIDBFIGEGGDMDNLCGDFHCNCABGAAAFAALMHMKBBIOJGPJDDDEIMIECBFOBNAPCMDALHPIJDFPDMELKAFLFFBFFOJGKGMHJOCAEOEPIEHMCKCIBKIJAJIHOCPFCAABKGODHIDOAAJAKALAGILFMGDIECGKBDJFAAAGCBKGKNAAEHBEGACOMAMIFKGBEMMNGBIAPHCHAAFGAKAOGAIAGNIDCIFBLHIEAHAGEAEIFCEGABPOFCBOMPGEIAKAIJIAAMDDADJEABFABAJEAAAAAAIIGCGFDIDOEOKIAAABGBAAHAIADCLBGDIHAAAKCAAAAAAAALANNLIFHIIAAAAAAAFIEMEAAAALPMKFIAACIIAAAAAAADOAAAJGEAAAAAAAAAAEAAKAAAECMAFAFAAAHKAAAAAAAAPKAAAMIAAAAAAAAAAAOCBNKAABGAGKOAAADMACAAAAAAAINABIFCAAAAAAAAAAAIHAIAAFKHBHNCAAAAMLIAAAAAAAADAEFAAAAAAAAAAAAAJCKAAAAANPLAKAAAAAGKAAAAAAAAFBAMAAAAAAAAAAAAAJLAAAAAAAMCPCAAAAAKIAAAAAAAAAAAAAAAAAAAAAAAAAFPKAAAGBDPNHAAAAAABIAAAAAAAAAAACAAAAAAAAAAAAAPCKDKCKAAAHADAAAAAEICAAAAAAAAAAIAAAAAAAAAAAABBKCBAAAAAACEEAAAAABGIAAAAAAAAAAAAAAAAAAAAAAAA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" alt="Olasubomi Afonja, Certified Fraud Examiner">
+      </div>
+      <div class="seal" aria-label="Certified Fraud Examiner"><div><b>CFE</b><span>Certified Fraud<br>Examiner</span></div></div>
+    </div>
+  </div>
+</header>
+
+<div class="proof band">
+  <div class="inner">
+    <div class="tile" style="background:var(--c2s)"><b style="color:var(--c2)">8,500+</b><span>customers matched to the NIBSS watchlist and actioned</span></div>
+    <div class="tile" style="background:var(--c1s)"><b style="color:var(--c1)">448K+</b><span>NIBSS watchlist records screened automatically</span></div>
+    <div class="tile" style="background:var(--c3s)"><b style="color:var(--c3)">61K+</b><span>account actions automated, each file in about 4 minutes</span></div>
+    <div class="tile" style="background:var(--c5s)"><b style="color:var(--c5)">100+</b><span>STRs/SARs filed, plus 5+ CTRs every week</span></div>
+  </div>
+</div>
+
+<section class="band" id="about">
+  <div class="inner about">
+    <div>
+      <span class="eyebrow">About</span>
+      <p class="big" style="margin-top:14px">I turn what I learn from fraud cases into rules, workflows and tools that stop the next case from happening.</p>
+      <div class="prose">
+        <p>I started in 2019 as a fraud investigator, checking identity documents and tracing syndicates. I went on to lead a team of over 60 investigators, 120 at its peak, and today I'm Lead Fraud Analyst at Branch, one of Nigeria's leading digital lenders.</p>
+        <p>My work sits where fraud operations, compliance and product meet. I run investigations end to end, write the policies that keep us aligned with CBN and NIBSS, and present the company's fraud position to senior leadership every month.</p>
+      </div>
+    </div>
+    <aside class="panel">
+      <span class="mono">Regulators &amp; agencies I work with</span>
+      <div class="chips"><span class="chip">CBN</span><span class="chip">NIBSS</span><span class="chip">EFCC</span><span class="chip">NPF</span><span class="chip">ICPC</span><span class="chip">NDLEA</span></div>
+      <span class="mono" style="margin-top:4px">Focus areas</span>
+      <div class="chips"><span class="chip">Lending fraud</span><span class="chip">KYC &amp; biometrics</span><span class="chip">AML / CFT</span><span class="chip">CTR, STR / SAR filing</span><span class="chip">Transaction monitoring</span><span class="chip">Watchlists</span><span class="chip">NIBSS HAWK</span></div>
+    </aside>
+  </div>
+</section>
+
+<section class="band work" id="work">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">Selected work</span><h2>Five controls I conceived and shipped</h2><p>For each one: the objective, who it served, my reasoning, how it was built, what was delivered and what it achieved. All five are live in production. I conceived each one and owned the requirements, rules and testing; engineering built the production systems. Visuals use mock data, and code panels show the logic I specified, written here to explain it.</p></div>
+
+    <div class="deck-wrap">
+      <div>
+        <div class="tabs" role="tablist" aria-label="Case studies" id="tabs"></div>
+        <p class="deck-hint">Click the front card to send it to the back. You can also use the arrow keys.</p>
+      </div>
+      <div>
+        <div class="deck" id="deck" tabindex="0" aria-label="Case study deck. Use left and right arrow keys to move between cards.">
+
+<!-- ================= 01 FACE SEARCH ================= -->
+<article class="card" style="--h:var(--c1);--hs:var(--c1s)" data-title="Face search">
+  <div class="card-top"><span class="num">01 / 05</span><span class="tag">Biometrics · Onboarding</span></div>
+  <div class="card-body">
+    <div class="title-row"><h3>Face search: one face, many accounts</h3><span class="status">Live in production</span></div>
+    <dl class="facets">
+      <div class="facet"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Objective</dt><dd>Stop one person from opening several accounts under different identities, borrowing on each and defaulting on all of them.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-people"/></svg></span><div><dt>Audience</dt><dd>The credit and onboarding teams, whose loan book carried these losses, and the fraud desk that reviews flagged cases.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><dt>Idea &amp; reasoning</dt><dd>Defaulted accounts kept showing the same person under new names, phones and IDs. Those are cheap to change. A face isn't, so every new selfie should be searched against existing customers.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-tools"/></svg></span><div><dt>Tools &amp; process</dt><dd>Reviewed defaulted cases to confirm the pattern, wrote the requirements, agreed the match threshold and review rules with engineering, and designed the reviewer screen.</dd></div></div>
+      <div class="facet wide"><span class="ic"><svg><use href="#i-box"/></svg></span><div><dt>Deliverable</dt><dd>An automatic face search at onboarding, plus a "Resolve face search match" screen where an analyst compares the two accounts side by side and records a decision in one click.</dd></div></div>
+      <div class="facet out"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Outcome · measured</dt>
+        <div class="kpis"><div><b>1,000+</b><span>face search blocks in one quarter</span></div><div><b>~97.5%</b><span>upheld on review</span></div><div><b>Before</b><span>any money goes out</span></div></div>
+        <dd>Only about 2.5% of blocks were cleared as false positives on review. Many flagged applicants were people who had already defaulted under another identity, so loans that would likely have been lost were never disbursed.</dd></div></div>
+    </dl>
+    <div class="roles"><div class="me"><b>My contribution</b>Spotted the multi-account pattern in defaulted loans, proposed face search, set the match threshold and the three review outcomes, designed the review screen, led testing, and own the review process.</div><div class="eng"><b>Engineering contribution</b>Built the biometric search service, wired it into onboarding and built the review screen.</div></div>
+
+    <div class="snaps">
+      <div class="snap-head"><span class="mono">How it works · step by step</span><span class="mono">Illustrated people · sample data</span></div>
+      <div class="flow">
+        <div><span class="st">STEP 1</span><b>Selfie taken</b><span>A new applicant takes a liveness selfie during onboarding.</span></div>
+        <div><span class="st">STEP 2</span><b>Face search</b><span>The face is compared with every existing customer's face.</span></div>
+        <div><span class="st">STEP 3 · FLAGGED</span><b>Account held</b><span>If the face matches someone with a different identity, no loan is offered and a review case is opened.</span></div>
+        <div><span class="st">STEP 4 · REVIEW</span><b>Analyst decides</b><span>An analyst compares both accounts and picks one of three outcomes.</span></div>
+      </div>
+      <div class="browser">
+        <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">fraud-console / face-search / resolve</span></div>
+        <div class="screen-scroll"><div class="screen fr">
+          <h5>Resolve face search match</h5>
+          <div class="fr-grid">
+            <div class="fr-col"><header style="background:#ef6351">User A · current applicant</header><div class="bd">
+              <svg class="pt" viewBox="0 0 120 150" role="img" aria-label="Illustrated selfie of User A"><rect width="120" height="150" fill="#6b5543"/><rect width="120" height="38" fill="#86705a"/><rect x="8" y="44" width="22" height="50" fill="#5a4636"/><use href="#body" style="color:#f1f1f1"/><use href="#f-w1"/><use href="#h-puff"/></svg>
+              <b>Funmi Sample</b><span class="meta">ID xxxx-4821 · uploaded 2025-10-01</span><span class="simbadge">Similarity 0.96</span></div></div>
+            <div class="fr-col"><header style="background:#5aa9e6">User B · existing customer</header><div class="bd">
+              <svg class="pt" viewBox="0 0 120 150" role="img" aria-label="Illustrated selfie of User B, the same face with braids"><rect width="120" height="150" fill="#1f6f78"/><circle cx="18" cy="20" r="12" fill="#e2b33a" opacity=".6"/><circle cx="104" cy="30" r="14" fill="#d9534f" opacity=".5"/><rect x="88" y="70" width="32" height="40" fill="#2f4a8a" opacity=".6"/><use href="#h-braids-back"/><use href="#body" style="color:#d08a2a"/><use href="#f-w1"/><use href="#h-braids"/></svg>
+              <b>Grace Sample</b><span class="meta">ID xxxx-1937 · uploaded 2024-12-17 · 2 past loans</span></div></div>
+            <div class="fr-col fr-res"><header style="background:#f2b33d;color:#1d1e33">Resolution</header><div class="bd">
+              <div class="opt">Mark User A correct<br>(User B is the duplicate)</div><div class="or">OR</div>
+              <div class="opt">Mark User B correct<br>(User A is the duplicate)</div><div class="or">OR</div>
+              <div class="opt">Identical uploads<br>(whitelist both)</div></div></div>
+          </div>
+        </div></div>
+      </div>
+      <div class="res-explain">
+        <div><b>One account is genuine</b>The analyst marks which account is the real person. The other is blocked as a duplicate, so it can't take new loans.</div>
+        <div><b>Same face, two names</b>This is the fraud pattern. The duplicate account stays blocked, and its history is kept for investigation and reporting.</div>
+        <div><b>Not fraud</b>If the match is a genuine false positive, both accounts are whitelisted so the pair isn't flagged again.</div>
+      </div>
+    </div>
+    <details class="code">
+            <summary>Logic I specified · illustrative Python: duplicate-face check</summary>
+<pre><span class="c"># Illustrative only: a simplified version of the idea, not production code.</span>
+<span class="k">import</span> numpy <span class="k">as</span> np
+
+MATCH_THRESHOLD = <span class="s">0.90</span>   <span class="c"># tuned against reviewed cases</span>
+
+<span class="k">def</span> cosine(a, b):
+    <span class="k">return</span> float(np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b)))
+
+<span class="k">def</span> screen_new_selfie(applicant, face_index):
+    <span class="s">"""Compare a new applicant's face against every existing customer."""</span>
+    hits = []
+    <span class="k">for</span> customer <span class="k">in</span> face_index.nearest(applicant.embedding, k=<span class="s">20</span>):
+        score = cosine(applicant.embedding, customer.embedding)
+        same_person = score >= MATCH_THRESHOLD
+        different_identity = customer.id_number != applicant.id_number
+        <span class="k">if</span> same_person <span class="k">and</span> different_identity:
+            hits.append((customer.user_id, round(score, <span class="s">2</span>)))
+
+    <span class="k">if</span> hits:
+        <span class="k">return</span> {<span class="s">"decision"</span>: <span class="s">"HOLD_FOR_REVIEW"</span>, <span class="s">"matches"</span>: hits}
+    <span class="k">return</span> {<span class="s">"decision"</span>: <span class="s">"PASS"</span>}</pre>
+          </details>
+  </div>
+</article>
+
+<!-- ================= 02 NIBSS WATCHLIST ================= -->
+<article class="card" style="--h:var(--c2);--hs:var(--c2s)" data-title="NIBSS watchlist">
+  <div class="card-top"><span class="num">02 / 05</span><span class="tag">Compliance · Automation</span></div>
+  <div class="card-body">
+    <div class="title-row"><h3>NIBSS watchlist management</h3><span class="status">Live in production</span></div>
+    <dl class="facets">
+      <div class="facet"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Objective</dt><dd>Act on every BVN in the industry fraud watchlist quickly, accurately and with an audit trail.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-people"/></svg></span><div><dt>Audience</dt><dd>Fraud analysts doing the work, the compliance team, and regulators (CBN, NIBSS) who expect timely action.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><dt>Idea &amp; reasoning</dt><dd>Watchlist files hold thousands of BVNs and matching them by hand took days, while a known fraudster could still transact. Each category maps to one clear action, so the work could be automated.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-tools"/></svg></span><div><dt>Tools &amp; process</dt><dd>Mapped each category to an action: watchlisted means a PND (Post No Debit), deceased means the account is closed, and delisted means it's reactivated. Then wrote the spec and tested it with engineering and compliance.</dd></div></div>
+      <div class="facet wide"><span class="ic"><svg><use href="#i-box"/></svg></span><div><dt>Deliverable</dt><dd>A watchlist page in the fraud console. An analyst uploads the NIBSS file, and every matched account gets a PND, is closed or is reactivated automatically, with upload history and per-file results.</dd></div></div>
+      <div class="facet out"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Outcome · measured</dt>
+        <div class="kpis"><div><b>8,500+</b><span>customers matched since Apr 2025</span></div><div><b>448K+</b><span>records screened across 60+ files</span></div><div><b>61K+</b><span>account actions (PND, close, reactivate)</span></div><div><b>~4 min</b><span>per file</span></div></div>
+        <dd>At even one minute per action by hand, that's roughly 1,000 analyst hours saved (estimate).</dd></div></div>
+    </dl>
+    <div class="roles"><div class="me"><b>My contribution</b>Mapped each watchlist category to an action (PND, close, reactivate), wrote the spec, aligned it with compliance, led testing, and run the uploads.</div><div class="eng"><b>Engineering contribution</b>Built the file processing, customer matching, automated account actions and the watchlist page.</div></div>
+
+    <div class="snaps">
+      <div class="snap-head"><span class="mono">Snapshot · watchlist page in the fraud console</span><span class="mono">Sample data</span></div>
+      <div class="browser">
+        <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">fraud-console / watchlist / nibss</span></div>
+        <div class="screen-scroll"><div class="screen app">
+          <aside><div class="logo">Fraud<span>·</span>Console</div><a>Overview</a><a>Alerts</a><a>Cases</a><a>Rules</a><a class="on">NIBSS watchlist</a><a>Reports</a><a>AI copilot</a></aside>
+          <main>
+            <div class="top"><h5>NIBSS watchlist</h5><span class="who">Last upload · today 09:12 · 4m 02s</span></div>
+            <div class="row2" style="grid-template-columns:1fr 1.3fr">
+              <div class="dropzone">⬆ Drop the NIBSS watchlist file here<br><span style="font-weight:400;font-size:11.5px">.xlsx · up to 10,000 rows · results ready in minutes</span></div>
+              <div class="k4" style="grid-template-columns:repeat(2,1fr)">
+                <div class="kc"><small>Records processed</small><b>7,350</b></div>
+                <div class="kc"><small>Customers matched</small><b>1,004</b></div>
+              </div>
+            </div>
+            <div class="k4">
+              <div class="kc" style="border-top:3px solid var(--c1)"><small>PND placed (watchlisted)</small><b>698</b><em class="dn">debits blocked</em></div>
+              <div class="kc" style="border-top:3px solid var(--fg)"><small>Closed (deceased)</small><b>112</b><em style="color:var(--muted)">accounts closed</em></div>
+              <div class="kc" style="border-top:3px solid var(--c5)"><small>Reactivated (delisted)</small><b>194</b><em class="up">PND lifted</em></div>
+              <div class="kc" style="border-top:3px solid var(--c3)"><small>Needs review</small><b>0</b><em style="color:var(--muted)">all auto-actioned</em></div>
+            </div>
+            <div class="row2">
+              <div class="pane"><h6>Recent uploads</h6>
+                <table class="t"><thead><tr><th>File</th><th>Rows</th><th>Matched</th><th>PND</th><th>Closed</th><th>Reactivated</th><th>Status</th></tr></thead><tbody>
+                <tr><td>nibss_watchlist_w45.xlsx</td><td>7,350</td><td>1,004</td><td>698</td><td>112</td><td>194</td><td><span class="pl p-lo">Done · 4m</span></td></tr>
+                <tr><td>nibss_watchlist_w44.xlsx</td><td>6,812</td><td>941</td><td>655</td><td>97</td><td>189</td><td><span class="pl p-lo">Done · 3m</span></td></tr>
+                <tr><td>nibss_watchlist_w43.xlsx</td><td>402</td><td>58</td><td>41</td><td>6</td><td>11</td><td><span class="pl p-lo">Done · 9s</span></td></tr>
+                </tbody></table></div>
+              <div class="pane"><h6>Actions this upload</h6>
+                <div class="donut-wrap">
+                  <svg width="110" height="110" viewBox="0 0 110 110" role="img" aria-label="Donut chart: PND 70 percent, closed 11 percent, reactivated 19 percent">
+                    <circle cx="55" cy="55" r="40" fill="none" stroke-width="16" style="stroke:var(--sunk)"/>
+                    <circle cx="55" cy="55" r="40" fill="none" stroke-width="16" stroke-dasharray="174.8 251.3" transform="rotate(-90 55 55)" style="stroke:var(--c1)"/>
+                    <circle cx="55" cy="55" r="40" fill="none" stroke-width="16" stroke-dasharray="28.0 251.3" stroke-dashoffset="-174.8" transform="rotate(-90 55 55)" style="stroke:var(--fg)"/>
+                    <circle cx="55" cy="55" r="40" fill="none" stroke-width="16" stroke-dasharray="48.5 251.3" stroke-dashoffset="-202.8" transform="rotate(-90 55 55)" style="stroke:var(--c5)"/>
+                    <text x="55" y="53" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-size="18" font-weight="800" style="fill:var(--fg)">1,004</text>
+                    <text x="55" y="67" text-anchor="middle" font-family="Inter, sans-serif" font-size="9" style="fill:var(--muted)">matched</text>
+                  </svg>
+                  <div class="legend"><span><i style="background:var(--c1)"></i>PND · 70%</span><span><i style="background:var(--fg)"></i>Closed · 11%</span><span><i style="background:var(--c5)"></i>Reactivated · 19%</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="pane"><h6>Matched customers</h6>
+              <table class="t"><thead><tr><th>BVN</th><th>Customer</th><th>Category</th><th>Requested by</th><th>Action</th></tr></thead><tbody>
+              <tr><td>222•••••301</td><td>Sample Customer 1</td><td>Fraud</td><td>Bank A</td><td><span class="pl p-hi">PND placed</span></td></tr>
+              <tr><td>221•••••560</td><td>Sample Customer 2</td><td>Deceased</td><td>NIBSS</td><td><span class="pl p-gr">Closed</span></td></tr>
+              <tr><td>223•••••947</td><td>Sample Customer 3</td><td>Delisted</td><td>Bank B</td><td><span class="pl p-lo">Reactivated</span></td></tr>
+              </tbody></table></div>
+          </main>
+        </div></div>
+      </div>
+    </div>
+    <details class="code">
+            <summary>Logic I specified · illustrative SQL: watchlist matching</summary>
+<pre><span class="c">-- Illustrative only: generic table names, simplified logic.</span>
+<span class="k">WITH</span> watchlist <span class="k">AS</span> (
+  <span class="k">SELECT</span> bvn, category, requesting_bank
+  <span class="k">FROM</span> staged_watchlist_upload            <span class="c">-- the file just uploaded</span>
+),
+matched <span class="k">AS</span> (
+  <span class="k">SELECT</span> c.customer_id, c.account_status, w.category
+  <span class="k">FROM</span> customers c
+  <span class="k">JOIN</span> watchlist w <span class="k">ON</span> w.bvn = c.bvn
+)
+<span class="k">SELECT</span>
+  customer_id,
+  category,
+  <span class="k">CASE</span>
+    <span class="k">WHEN</span> category = <span class="s">'fraud'</span>       <span class="k">THEN</span> <span class="s">'PLACE_PND'</span>      <span class="c">-- Post No Debit</span>
+    <span class="k">WHEN</span> category = <span class="s">'deceased'</span>    <span class="k">THEN</span> <span class="s">'CLOSE_ACCOUNT'</span>
+    <span class="k">WHEN</span> category = <span class="s">'delisted'</span>
+     <span class="k">AND</span> account_status = <span class="s">'watchlist_pnd'</span>    <span class="k">THEN</span> <span class="s">'LIFT_PND'</span>
+  <span class="k">END</span> <span class="k">AS</span> action
+<span class="k">FROM</span> matched;</pre>
+          </details>
+  </div>
+</article>
+
+<!-- ================= 03 FRAUD MANAGEMENT SYSTEM ================= -->
+<article class="card" style="--h:var(--c3);--hs:var(--c3s)" data-title="Fraud management system">
+  <div class="card-top"><span class="num">03 / 05</span><span class="tag">Platform · Rules · AI</span></div>
+  <div class="card-body">
+    <div class="title-row"><h3>Fraud management system</h3><span class="status">Live in production</span></div>
+    <dl class="facets">
+      <div class="facet"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Objective</dt><dd>Bring detection, investigation and decisions into one console, so fraud is caught in real time and every case has one owner, one status and one history.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-people"/></svg></span><div><dt>Audience</dt><dd>Fraud analysts and transaction monitoring, the compliance team, leadership, and auditors or law enforcement who ask for evidence later.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><dt>Idea &amp; reasoning</dt><dd>Alerts came from different places and cases lived in sheets and chats, so analysts lost time and decisions were hard to explain. Putting the rules, the queue and the evidence in one place, with AI doing the reading, lets analysts spend their time on judgement.</dd></div></div>
+      <div class="facet wide"><span class="ic"><svg><use href="#i-tools"/></svg></span><div><dt>How rules and AI are built in</dt><dd><b>Rules engine:</b> each rule is a set of conditions (amount, account age, velocity, device, beneficiary) with an action and a severity. Every alert shows exactly which rule fired. New rules are tested on past data before they go live, so we know their hit rate and precision up front.<br><b>AI copilot:</b> on every case, AI summarises the account's activity, explains why it looks risky, finds similar past cases, suggests a next step and drafts the regulatory report narrative. The analyst always makes the final decision.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-box"/></svg></span><div><dt>Deliverable</dt><dd>A fraud console with an overview dashboard, alert queue, rules engine, case workspace with AI copilot, NIBSS watchlist and reports.</dd></div></div>
+      <div class="facet out"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Outcome</dt><dd>Alerts, rules and cases now live in one place with a full audit trail. AI summaries and draft narratives cut the reading and writing in each case, so analysts move faster and decisions are more consistent. Detailed performance figures are internal and not quoted here.</dd></div></div>
+    </dl>
+    <div class="roles"><div class="me"><b>My contribution</b>Designed the case workflow and stages, wrote the detection rules and thresholds, chose where AI should help analysts, wrote the requirements and led testing. My team works in it daily.</div><div class="eng"><b>Engineering contribution</b>Built the console, the rules engine and the AI integration.</div></div>
+
+    <div class="snaps" data-snaps>
+      <div class="snap-head">
+        <div class="snap-tabs" role="tablist" aria-label="Fraud console screens">
+          <button type="button" role="tab" aria-selected="true">Overview</button>
+          <button type="button" role="tab" aria-selected="false">Alert queue</button>
+          <button type="button" role="tab" aria-selected="false">Rules engine</button>
+          <button type="button" role="tab" aria-selected="false">Case + AI copilot</button>
+        </div>
+        <span class="mono">Mock screens · sample data</span>
+      </div>
+      <div class="browser">
+        <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url" data-url>fraud-console / overview</span></div>
+        <div class="screen-scroll">
+
+          <!-- overview -->
+          <div class="screen app" data-path="fraud-console / overview">
+            <aside><div class="logo">Fraud<span>·</span>Console</div><a class="on">Overview</a><a>Alerts</a><a>Cases</a><a>Rules</a><a>NIBSS watchlist</a><a>Reports</a><a>AI copilot</a></aside>
+            <main>
+              <div class="top"><h5>Good morning, Olasubomi</h5><span class="who">Last 7 days · live</span></div>
+              <div class="k4">
+                <div class="kc"><small>Open alerts</small><b>142</b><em class="dn">▲ 12% vs last week</em></div>
+                <div class="kc"><small>Avg time to resolve</small><b>2.4h</b><em class="up">▼ 38% with AI summaries</em></div>
+                <div class="kc"><small>Value held for review</small><b>₦18.2m</b><em style="color:var(--muted)">across 63 cases</em></div>
+                <div class="kc"><small>False positive rate</small><b>9.1%</b><em class="up">▼ 2.3 pts</em></div>
+              </div>
+              <div class="row2">
+                <div class="pane"><h6>Alerts per day</h6>
+                  <div class="bars"><div style="height:42%"></div><div style="height:55%"></div><div style="height:48%"></div><div style="height:70%"></div><div class="hi" style="height:92%"></div><div style="height:60%"></div><div style="height:51%"></div></div>
+                  <div class="bx"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div></div>
+                <div class="pane"><h6>Top firing rules</h6><div class="list">
+                  <div><span>Large transfer · new account</span><span class="meter"><i style="width:88%"></i></span></div>
+                  <div><span>Device shared by 4+ users</span><span class="meter"><i style="width:64%"></i></span></div>
+                  <div><span>Rapid in-and-out (mule)</span><span class="meter"><i style="width:51%"></i></span></div>
+                  <div><span>Face search match</span><span class="meter"><i style="width:37%"></i></span></div>
+                  <div><span>New beneficiary at night</span><span class="meter"><i style="width:22%"></i></span></div></div></div>
+              </div>
+              <div class="pane"><h6>Needs attention</h6>
+                <table class="t"><tbody>
+                <tr><td><span class="pl p-hi">High</span></td><td>Mule pattern: 14 inbound transfers then cash-out in 20 min</td><td class="score">AI risk 0.93</td><td>SLA 12m</td></tr>
+                <tr><td><span class="pl p-md">Medium</span></td><td>Device linked to 5 accounts with different BVNs</td><td class="score">AI risk 0.71</td><td>SLA 45m</td></tr>
+                </tbody></table></div>
+            </main>
+          </div>
+
+          <!-- alerts -->
+          <div class="screen app" data-path="fraud-console / alerts" hidden>
+            <aside><div class="logo">Fraud<span>·</span>Console</div><a>Overview</a><a class="on">Alerts</a><a>Cases</a><a>Rules</a><a>NIBSS watchlist</a><a>Reports</a><a>AI copilot</a></aside>
+            <main>
+              <div class="top"><h5>Alert queue</h5><span class="who">Sorted by AI risk · 142 open</span></div>
+              <div style="display:flex;gap:6px;flex-wrap:wrap"><span class="pl p-in">All</span><span class="pl p-gr">High · 31</span><span class="pl p-gr">Medium · 74</span><span class="pl p-gr">Low · 37</span><span class="pl p-gr">Unassigned · 18</span></div>
+              <div class="pane" style="padding:4px 4px 0">
+                <table class="t"><thead><tr><th>Severity</th><th>Rule that fired</th><th>Customer</th><th>Amount</th><th>AI risk</th><th>Owner</th><th>SLA</th></tr></thead><tbody>
+                <tr><td><span class="pl p-hi">High</span></td><td>Rapid in-and-out (mule)</td><td>Sample User 104</td><td>₦1,240,000</td><td class="score" style="color:var(--c1)">0.93</td><td>O.A.</td><td>12m</td></tr>
+                <tr><td><span class="pl p-hi">High</span></td><td>Large transfer · new account</td><td>Sample User 221</td><td>₦850,000</td><td class="score" style="color:var(--c1)">0.88</td><td>Unassigned</td><td>18m</td></tr>
+                <tr><td><span class="pl p-md">Medium</span></td><td>Device shared by 4+ users</td><td>Sample User 078</td><td>₦—</td><td class="score" style="color:#a86400">0.71</td><td>K.B.</td><td>45m</td></tr>
+                <tr><td><span class="pl p-md">Medium</span></td><td>Face search match</td><td>Sample User 312</td><td>₦—</td><td class="score" style="color:#a86400">0.66</td><td>Unassigned</td><td>1h</td></tr>
+                <tr><td><span class="pl p-lo">Low</span></td><td>New beneficiary at night</td><td>Sample User 459</td><td>₦95,000</td><td class="score" style="color:var(--c5)">0.32</td><td>T.O.</td><td>4h</td></tr>
+                <tr><td><span class="pl p-lo">Low</span></td><td>Amount just under CTR limit</td><td>Sample User 530</td><td>₦4,950,000</td><td class="score" style="color:var(--c5)">0.29</td><td>T.O.</td><td>4h</td></tr>
+                </tbody></table></div>
+              <div class="sim-line"><span>✦ <b>AI triage:</b> 3 alerts share a beneficiary account. Suggest merging into one case.</span></div>
+            </main>
+          </div>
+
+          <!-- rules -->
+          <div class="screen app" data-path="fraud-console / rules / new-account-large-transfer" hidden>
+            <aside><div class="logo">Fraud<span>·</span>Console</div><a>Overview</a><a>Alerts</a><a>Cases</a><a class="on">Rules</a><a>NIBSS watchlist</a><a>Reports</a><a>AI copilot</a></aside>
+            <main>
+              <div class="top"><h5>Rules engine</h5><span class="who">24 live · 3 in test</span></div>
+              <div class="row2" style="grid-template-columns:1fr 1.15fr">
+                <div class="pane" style="padding:4px 4px 0"><table class="t"><thead><tr><th>Rule</th><th>Live</th><th>Precision</th></tr></thead><tbody>
+                  <tr><td><b>Large transfer · new account</b></td><td><span class="toggle"></span></td><td class="score">81%</td></tr>
+                  <tr><td>Rapid in-and-out (mule)</td><td><span class="toggle"></span></td><td class="score">76%</td></tr>
+                  <tr><td>Device shared by 4+ users</td><td><span class="toggle"></span></td><td class="score">69%</td></tr>
+                  <tr><td>Face search match</td><td><span class="toggle"></span></td><td class="score">97%</td></tr>
+                  <tr><td>Amount just under CTR limit</td><td><span class="toggle"></span></td><td class="score">44%</td></tr>
+                  <tr><td>Login from new country</td><td><span class="toggle off"></span></td><td class="score">—</td></tr>
+                </tbody></table></div>
+                <div class="pane"><h6>Edit rule · Large transfer · new account</h6>
+                  <div class="cond">
+                    <div><span class="kw">IF</span><code>transfer_amount &gt; ₦500,000</code></div>
+                    <div><span class="kw">AND</span><code>account_age &lt; 7 days</code></div>
+                    <div><span class="kw">AND</span><code>beneficiary_is_new = true</code></div>
+                    <div><span class="kw">AND</span><code>device_users ≥ 2</code></div>
+                  </div>
+                  <div class="then" style="margin-top:10px">THEN hold the transfer · open a High alert · SLA 15 min</div>
+                  <div class="sim-line" style="margin-top:10px"><span><b>Backtest, last 30 days:</b> 41 hits</span><span>33 confirmed fraud</span><span><b>81% precision</b></span></div>
+                  <div class="sim-line" style="margin-top:8px;background:var(--c2s)"><span>✦ <b>AI suggestion:</b> adding "first transfer of the day" would cut false alerts by about a third. Test it?</span></div>
+                </div>
+              </div>
+            </main>
+          </div>
+
+          <!-- case + AI -->
+          <div class="screen app" data-path="fraud-console / cases / FC-2291" hidden>
+            <aside><div class="logo">Fraud<span>·</span>Console</div><a>Overview</a><a>Alerts</a><a class="on">Cases</a><a>Rules</a><a>NIBSS watchlist</a><a>Reports</a><a>AI copilot</a></aside>
+            <main>
+              <div class="top"><h5>Case FC-2291 · Sample User 104</h5><span class="pl p-hi">High · investigating</span></div>
+              <div class="row2" style="grid-template-columns:1fr 1.1fr">
+                <div class="pane"><h6>Timeline</h6><div class="tl">
+                  <div><b>Account opened</b><br><small>3 days ago · KYC tier 1</small></div>
+                  <div><b>14 inbound transfers · ₦1.24m</b><br><small>today 10:02–10:19 · 9 senders</small></div>
+                  <div><b>Rule fired: rapid in-and-out</b><br><small>10:21 · transfer held</small></div>
+                  <div><b>2 senders reported fraud to their banks</b><br><small>10:40 · interbank recall</small></div>
+                  <div><b>Assigned to O.A.</b><br><small>10:42</small></div>
+                </div></div>
+                <div class="ai"><h6>✦ AI copilot</h6>
+                  <div class="blk"><b>Summary</b>New account received 14 transfers from 9 people in 17 minutes, then tried to move ₦1.2m to a new beneficiary. Matches a mule pattern.</div>
+                  <div class="blk"><b>Why it's risky</b>Account age 3 days · many first-time senders · funds out within minutes · 2 interbank fraud reports.</div>
+                  <div class="blk"><b>Similar past cases</b>FC-1877, FC-2034, FC-2102 · all confirmed mule accounts.</div>
+                  <div class="blk"><b>Suggested next step</b>Place PND, start recall for reported funds, file an STR.</div>
+                  <div class="btns"><span class="go">Draft STR narrative</span><span>Place PND</span><span>Request ID</span><span>Clear as genuine</span></div>
+                  <small style="color:var(--muted)">AI suggests. The analyst decides, and every action is logged.</small>
+                </div>
+              </div>
+            </main>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <details class="code">
+            <summary>Logic I specified · illustrative Python: case lifecycle</summary>
+<pre><span class="c"># Illustrative only: a case can only move along allowed paths.</span>
+ALLOWED = {
+    <span class="s">"NEW"</span>:           {<span class="s">"INVESTIGATING"</span>},
+    <span class="s">"INVESTIGATING"</span>: {<span class="s">"CONFIRMED"</span>, <span class="s">"CLEARED"</span>},
+    <span class="s">"CONFIRMED"</span>:     {<span class="s">"ACTIONED"</span>},
+    <span class="s">"CLEARED"</span>:       {<span class="s">"CLOSED"</span>},
+    <span class="s">"ACTIONED"</span>:      {<span class="s">"CLOSED"</span>},
+}
+
+<span class="k">def</span> move_case(case, new_status, analyst, note):
+    <span class="k">if</span> new_status <span class="k">not in</span> ALLOWED[case.status]:
+        <span class="k">raise</span> ValueError(f<span class="s">"Can't go from {case.status} to {new_status}"</span>)
+    <span class="k">if not</span> note:
+        <span class="k">raise</span> ValueError(<span class="s">"Every decision needs a reason"</span>)
+    case.history.append((case.status, new_status, analyst, note))
+    case.status = new_status</pre>
+          </details>
+  </div>
+</article>
+
+<!-- ================= 04 FACE SWAP ================= -->
+<article class="card" style="--h:var(--c4);--hs:var(--c4s)" data-title="Face-swap loophole">
+  <div class="card-top"><span class="num">04 / 05</span><span class="tag">Account takeover · KYC</span></div>
+  <div class="card-body">
+    <div class="title-row"><h3>Closing the face-swap loophole</h3><span class="status">Live in production</span></div>
+    <dl class="facets">
+      <div class="facet"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Objective</dt><dd>Detect and stop account takeover (ATO): a fraudster gets into a genuine customer's account, fails the face check, then passes on a second try using the real owner's face.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-people"/></svg></span><div><dt>Audience</dt><dd>The fraud desk investigating account takeover, the KYC operations team and the product owners for onboarding and verification.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><dt>Idea &amp; reasoning</dt><dd>Reviewing rejected selfies, I saw accounts with two different faces minutes apart: the fraudster's own face, rejected, then the real owner's face (from a photo or the owner themselves), accepted. The face check looks at one selfie at a time, so it can't see the switch, and the takeover goes through.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-tools"/></svg></span><div><dt>Tools &amp; process</dt><dd>Gathered takeover cases from rejection reviews, wrote the rule and its edge cases (same person in different light vs. a different person), and worked through them with engineering.</dd></div></div>
+      <div class="facet wide"><span class="ic"><svg><use href="#i-box"/></svg></span><div><dt>Deliverable</dt><dd>A face history check: every new selfie is compared with all earlier selfies on the same account, including rejected ones. If they're different people, the account is held for review.</dd></div></div>
+      <div class="facet out"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Outcome</dt><dd>Takeover attempts that would pass a single face check are now caught and held before the fraudster can move money or take a loan in the victim's name.</dd></div></div>
+    </dl>
+    <div class="roles"><div class="me"><b>My contribution</b>Linked the face switch to account takeover while reviewing rejected cases, defined the rule and its edge cases, and led testing.</div><div class="eng"><b>Engineering contribution</b>Built the face history comparison into the onboarding flow.</div></div>
+    <div class="snaps">
+      <div class="snap-head"><span class="mono">Snapshot · what the analyst sees on the profile</span><span class="mono">Illustrated people · sample data</span></div>
+      <div class="browser">
+        <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">fraud-console / users / sample-7702 / selfies</span></div>
+        <div class="screen-scroll"><div class="screen pf">
+          <table class="kv"><tbody>
+            <tr><td>User</td><td><u>Tamuno Sample</u></td></tr>
+            <tr><td>Country</td><td>NG</td></tr>
+            <tr><td>Social ID number</td><td>xxxx xxxx xxx</td></tr>
+            <tr><td>Date of birth</td><td>1965-xx-xx</td></tr>
+            <tr><td>Gender</td><td>Male</td></tr>
+            <tr><td>Borrower type</td><td>First-time borrower</td></tr>
+            <tr><td>Legal name</td><td>TAMUNO SAMPLE</td></tr>
+            <tr><td>Address</td><td>xx Sample Street<br>Lagos, NG</td></tr>
+          </tbody></table>
+          <div class="sel">
+            <svg class="pt" viewBox="0 0 120 150" role="img" aria-label="Illustrated selfie 1: a young man, rejected"><rect width="120" height="150" fill="#3a3b47"/><rect x="92" y="0" width="10" height="150" fill="#4f6a8f"/><rect x="10" y="20" width="16" height="70" fill="#5c6f84" opacity=".7"/><use href="#body" style="color:#c8302c"/><use href="#f-m2"/><use href="#h-short"/></svg>
+            <table class="kv"><tbody><tr><td>Selfie 1</td><td>Today 5:41 PM</td></tr><tr><td>Status</td><td><span class="tagg" style="background:var(--c1)">REJECTED</span></td></tr><tr><td>Rejected by</td><td>System · no match to ID</td></tr></tbody></table>
+          </div>
+          <div class="sel">
+            <svg class="pt" viewBox="0 0 120 150" role="img" aria-label="Illustrated selfie 2: an older man who matches the ID"><rect width="120" height="150" fill="#3d5b60"/><rect x="0" y="0" width="14" height="150" fill="#33494d"/><use href="#body" style="color:#b9322e"/><use href="#f-m1"/><use href="#h-grey"/></svg>
+            <table class="kv"><tbody><tr><td>Selfie 2</td><td>Today 6:24 PM</td></tr><tr><td>Status</td><td><span class="tagg" style="background:var(--ok)">MATCHES ID</span></td></tr><tr><td>Face history</td><td><b style="color:var(--c4)">Different person</b></td></tr></tbody></table>
+          </div>
+          <div class="alertbar"><b>⚠ Face history check</b><span>Selfie 1 vs Selfie 2 similarity 0.12. Two different people on one account within 43 minutes. Possible account takeover: account held for review.</span></div>
+        </div></div>
+      </div>
+    </div>
+    <details class="code">
+            <summary>Logic I specified · illustrative Python: face history check</summary>
+<pre><span class="c"># Illustrative only.</span>
+SAME_PERSON = <span class="s">0.85</span>
+
+<span class="k">def</span> check_face_history(account, new_selfie):
+    <span class="s">"""Flag when a newly accepted face is a different person from earlier faces."""</span>
+    previous = [f <span class="k">for</span> f <span class="k">in</span> account.faces <span class="k">if</span> f.id != new_selfie.id]
+    <span class="k">for</span> old <span class="k">in</span> previous:
+        score = similarity(old.embedding, new_selfie.embedding)
+        <span class="k">if</span> score &lt; SAME_PERSON:
+            <span class="k">return</span> {
+                <span class="s">"decision"</span>: <span class="s">"HOLD_FOR_REVIEW"</span>,
+                <span class="s">"reason"</span>: <span class="s">"multiple_faces_on_account"</span>,
+                <span class="s">"earlier_face_status"</span>: old.status,   <span class="c"># e.g. rejected</span>
+                <span class="s">"score"</span>: round(score, <span class="s">2</span>),
+            }
+    <span class="k">return</span> {<span class="s">"decision"</span>: <span class="s">"PASS"</span>}</pre>
+          </details>
+  </div>
+</article>
+
+<!-- ================= 05 REPORTING ================= -->
+<article class="card" style="--h:var(--c5);--hs:var(--c5s)" data-title="Fraud reporting">
+  <div class="card-top"><span class="num">05 / 05</span><span class="tag">Intelligence · Reporting</span></div>
+  <div class="card-body">
+    <div class="title-row"><h3>Fraud reporting for leadership</h3><span class="status">Live in production</span></div>
+    <dl class="facets">
+      <div class="facet"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Objective</dt><dd>Give leadership a regular, reliable view of fraud volume, losses, recoveries and which controls are working.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-people"/></svg></span><div><dt>Audience</dt><dd>Senior leadership and governance committees.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-bulb"/></svg></span><div><dt>Idea &amp; reasoning</dt><dd>Without regular numbers, fraud decisions were reactive. One page that puts complaints, recoveries, monitoring, face search, watchlist and regulatory work side by side shows the whole picture at a glance.</dd></div></div>
+      <div class="facet"><span class="ic"><svg><use href="#i-tools"/></svg></span><div><dt>Tools &amp; process</dt><dd>Chose the metrics, wrote the SQL behind each one, and set a monthly and quarterly reporting routine with a one-page executive summary up front.</dd></div></div>
+      <div class="facet wide"><span class="ic"><svg><use href="#i-box"/></svg></span><div><dt>Deliverable</dt><dd>A monthly fraud performance report and a quarterly fraud report that I present to leadership. The executive summary below is a mock with sample numbers.</dd></div></div>
+      <div class="facet out"><span class="ic"><svg><use href="#i-target"/></svg></span><div><dt>Outcome</dt><dd>Fraud is a standing item for leadership. The report tracks every control in this portfolio, and it has shaped which controls the team builds next.</dd></div></div>
+    </dl>
+    <div class="roles"><div class="me"><b>My contribution</b>Chose the metrics, wrote the queries, built the report and present it to leadership.</div><div class="eng"><b>Data team</b>Data platform: provides the underlying data and tables.</div></div>
+    <div class="snaps">
+      <div class="snap-head"><span class="mono">Snapshot · quarterly report, executive summary</span><span class="mono">Sample data</span></div>
+      <div class="browser">
+        <div class="bar"><i style="background:#ff5f57"></i><i style="background:#febc2e"></i><i style="background:#28c840"></i><span class="url">fraud-report-q1.pdf · page 3</span></div>
+        <div class="screen-scroll"><div class="screen ex">
+          <div class="ey">01 · Executive summary</div>
+          <h5>Q1 at a glance <span class="sample-tag">SAMPLE DATA</span></h5>
+          <div class="per">January – March · sample figures</div>
+          <div class="ex-grid">
+            <div><b>142</b><span>fraud desk complaints</span><em style="color:var(--c1)">₦4.1m reported</em></div>
+            <div><b>₦2.4m</b><span>fraud value recovered</span><em style="color:var(--ok)">58% of value reported</em></div>
+            <div><b>96</b><span>erroneous transfers</span><em style="color:#c77800">68% of desk complaints</em></div>
+            <div><b>0.0004%</b><span>fraud volume ratio</span><em style="color:var(--c2)">wallet value ₦210bn</em></div>
+            <div><b>6,120</b><span>transactions flagged by monitoring</span><em>85% cleared as genuine</em></div>
+            <div><b>640</b><span>device-sharing blocks</span><em style="color:var(--c5)">4% cleared as false positives</em></div>
+            <div><b>205</b><span>wallets watchlisted</span><em>110 delisted · 96 deceased</em></div>
+            <div><b>812</b><span>CTRs (₦5m+ transactions)</span><em style="color:#3b9bd8">₦7.4bn in value</em></div>
+          </div>
+          <div class="ex-strip"><span><b>142</b> fraud desk complaints</span><span><b>February</b> busiest month (52)</span><span><b>131</b> regulator letters</span></div>
+          <div class="ex-foot"><span>Sample Co. · Fraud report · Q1 · Sample data</span><span>3</span></div>
+        </div></div>
+      </div>
+    </div>
+    <details class="code">
+            <summary>Query pattern I use · illustrative SQL: monthly summary</summary>
+<pre><span class="c">-- Illustrative only: generic schema.</span>
+<span class="k">SELECT</span>
+  DATE_TRUNC(<span class="s">'month'</span>, f.flagged_at)                    <span class="k">AS</span> month,
+  f.control_name,                                          <span class="c">-- face_search, watchlist, ...</span>
+  COUNT(<span class="k">DISTINCT</span> f.customer_id)                           <span class="k">AS</span> customers_caught,
+  SUM(<span class="k">CASE WHEN</span> l.disbursed_at &lt; f.flagged_at
+           <span class="k">THEN</span> l.outstanding <span class="k">ELSE</span> <span class="s">0</span> <span class="k">END</span>)               <span class="k">AS</span> exposure_at_flag,
+  SUM(<span class="k">CASE WHEN</span> l.disbursed_at <span class="k">IS NULL</span>
+           <span class="k">THEN</span> a.requested_amount <span class="k">ELSE</span> <span class="s">0</span> <span class="k">END</span>)          <span class="k">AS</span> loans_prevented
+<span class="k">FROM</span> fraud_flags f
+<span class="k">LEFT JOIN</span> loans l             <span class="k">ON</span> l.customer_id = f.customer_id
+<span class="k">LEFT JOIN</span> loan_applications a <span class="k">ON</span> a.customer_id = f.customer_id
+<span class="k">GROUP BY</span> <span class="s">1</span>, <span class="s">2</span>
+<span class="k">ORDER BY</span> <span class="s">1</span>, <span class="s">2</span>;</pre>
+          </details>
+  </div>
+</article>
+</div>
+
+        <div class="deck-controls">
+          <span class="counter" id="counter">01 <span>/ 05</span></span>
+          <div style="display:flex;gap:8px">
+            <button class="btn sm" id="prev" type="button">← Previous</button>
+            <button class="btn solid sm" id="next" type="button">Next case →</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="note">Visuals use mock or dummy data. Code samples are simplified illustrations written for this site, not employer code. Figures are rounded.</p>
+  </div>
+</section>
+
+<section class="band" id="approach">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">How I think</span><h2>Every fraud rule is a trade-off</h2><p>Set a rule too strict and genuine customers get blocked. Set it too loose and fraud gets through. Try it yourself with eight mock face-match pairs.</p></div>
+    <div class="sim">
+      <div class="sim-box">
+        <div class="sim-row"><span class="mono">Face match threshold</span><b id="thv">0.85</b></div>
+        <input type="range" id="th" min="0.50" max="0.99" step="0.01" value="0.85" aria-label="Face match threshold">
+        <div class="pairs" id="pairs"></div>
+        <div class="sim-out">
+          <div style="background:var(--c5s)"><b id="o-caught" style="color:var(--c5)">0</b><span>fraud pairs caught</span></div>
+          <div style="background:var(--c3s)"><b id="o-missed" style="color:var(--c3)">0</b><span>fraud pairs missed</span></div>
+          <div style="background:var(--c1s)"><b id="o-false" style="color:var(--c1)">0</b><span>genuine users blocked</span></div>
+        </div>
+        <p class="sim-verdict" id="verdict"></p>
+      </div>
+      <div class="method">
+        <div class="step"><span class="n" style="background:var(--c1)">1</span><div><h4>Find the gap</h4><p>Study defaulted loans, rejected KYC attempts and interbank reports to find exactly how fraud got through.</p></div></div>
+        <div class="step"><span class="n" style="background:var(--c3)">2</span><div><h4>Design the control</h4><p>Write the rule, its threshold and its edge cases, and check them against real cases so genuine customers aren't hurt.</p></div></div>
+        <div class="step"><span class="n" style="background:var(--c2)">3</span><div><h4>Ship it with engineering</h4><p>Write clear requirements, stay through testing and rollout, and make sure compliance signs off.</p></div></div>
+        <div class="step"><span class="n" style="background:var(--c5)">4</span><div><h4>Measure and adjust</h4><p>Track what the control catches and what it costs, report it to leadership, and tune it as fraud adapts.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="band" id="leadership">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">Leadership &amp; governance</span><h2>Building the teams that run the controls</h2><p>Controls only work if the people running them are trained, focused and held to a standard. This is how I lead.</p></div>
+    <div class="lead-grid">
+      <article class="lead" style="--h:var(--c3)">
+        <span class="mono">Newedge Finance · 2020 – 2022</span>
+        <h3>Leading a large investigation team</h3>
+        <div class="big-n"><div><b>60+</b><span>investigators led</span></div><div><b>120</b><span>at peak</span></div><div><b>Weekly</b><span>fraud-trend training</span></div></div>
+        <ul><li>Assigned and tracked case investigations across the team.</li><li>Ran weekly training on new fraud trends so investigators could spot them early.</li><li>Ran AML training and set standards for evidence gathering and case write-ups.</li><li>Kept the team focused and productive through growth and through a reduction in headcount.</li></ul>
+      </article>
+      <article class="lead" style="--h:var(--c2)">
+        <span class="mono">Branch International · 2022 – now</span>
+        <h3>Building capability beyond my team</h3>
+        <div class="big-n"><div><b>1</b><span>direct report</span></div><div><b>Payments</b><span>team trained</span></div><div><b>Monthly</b><span>leadership reporting</span></div></div>
+        <ul><li>Manage and develop a direct report.</li><li>Train the payments team who work the transaction monitoring queue, so fraud is caught at first review.</li><li>Train customer success on emerging fraud trends.</li><li>Present fraud performance and risk to senior leadership and governance committees every month.</li></ul>
+      </article>
+      <article class="lead" style="--h:var(--c4)">
+        <span class="mono">Governance</span>
+        <h3>Policy and standards</h3>
+        <ul><li>Write and maintain the Fraud Policy, Fraud SOP and APP (authorised push payment) policy in line with CBN and NIBSS standards.</li><li>Built QA frameworks and SOPs for investigations, auditing case files against policy.</li><li>Keep every decision in an auditable case trail, ready for regulators and law enforcement.</li></ul>
+      </article>
+      <article class="lead" style="--h:var(--c5)">
+        <span class="mono">How I lead</span>
+        <h3>My approach</h3>
+        <ul><li><b>Teach patterns, not just cases.</b> A team that knows this week's fraud trends catches next week's cases.</li><li><b>Clear ownership.</b> Every case has one owner and one next step.</li><li><b>Measure what matters.</b> Turnaround, accuracy and losses prevented, reported openly to leadership.</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band aml" id="financial-crime">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">Financial crime &amp; regulatory work</span><h2>AML, reporting and industry escalation</h2><p>Alongside fraud prevention, I own the financial crime reporting and the regulator relationship on the fraud desk.</p></div>
+    <div class="aml-grid">
+      <div style="--h:var(--c1)"><b>100+</b><strong>STRs / SARs filed</strong><p>Suspicious transaction and activity reports, built from my own AML investigations.</p></div>
+      <div style="--h:var(--c2)"><b>5+ / week</b><strong>CTRs filed</strong><p>Currency transaction reports filed every week since joining Branch.</p></div>
+      <div style="--h:var(--c3)"><b>Real time</b><strong>Interbank escalations</strong><p>Fraudulent transactions escalated to other banks as they come in, to stop funds moving on.</p></div>
+      <div style="--h:var(--c5)"><b>6</b><strong>Agencies engaged</strong><p>Primary contact for requests from CBN, NIBSS, EFCC, NPF, ICPC and NDLEA. I also managed the NIBSS fraud solution (HAWK).</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band exp" id="experience">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">Experience</span><h2>From investigator to fraud lead</h2></div>
+    <div class="rail" aria-hidden="true">
+      <div style="flex:10;background:var(--c4)">Transnet</div>
+      <div style="flex:25;background:var(--c3)">Newedge Finance</div>
+      <div style="flex:6;background:var(--c1)">Carbon</div>
+      <div style="flex:49;background:var(--c2)">Branch International</div>
+    </div>
+    <div class="rail-years"><span style="flex:10">2019</span><span style="flex:25">2020</span><span style="flex:6">2022</span><span style="flex:49">2022 → today</span></div>
+
+    <div class="jobs">
+      <article class="job" style="--h:var(--c2);--hs:var(--c2s)">
+        <div class="co"><h3>Branch International</h3><span class="when">2022 – Present · Lagos</span></div>
+        <span class="ladder-cap">Promoted twice</span>
+        <div class="ladder">
+          <div><b>Fraud Analyst</b><span>2022</span></div>
+          <div><b>Senior Fraud Analyst</b><span>2024</span></div>
+          <div><b>Lead Fraud Analyst</b><span>2025 – now</span></div>
+        </div>
+        <h4>As Lead Fraud Analyst</h4>
+        <ul>
+          <li>Own fraud detection, investigation and response strategy across digital lending and wallets.</li>
+          <li>Designed and scaled the fraud risk framework, including real-time monitoring rules and automated investigation workflows.</li>
+          <li>Lead AML investigations, and have filed 100+ STRs/SARs and at least 5 CTRs every week. Represent Branch in interbank fraud escalations and NIBSS watchlist management.</li>
+          <li>Manage a direct report and train the payments team who work the transaction monitoring queue.</li>
+          <li>Write and maintain the Fraud Policy, Fraud SOP and APP policy in line with CBN and NIBSS standards.</li>
+          <li>Present monthly fraud performance and risk reports to senior leadership and governance committees.</li>
+        </ul>
+        <details class="more"><summary>Earlier roles at Branch</summary>
+          <ul>
+            <li><b>Senior Fraud Analyst:</b> managed the NIBSS fraud management solution (HAWK), owned high-risk cases, ran KYC sampling on tiered accounts, and trained and mentored analysts.</li>
+            <li><b>Fraud Analyst:</b> investigated fraud incidents and suspicious transactions, ran AML investigations and regulatory filings, and prepared management and board fraud reports.</li>
+          </ul>
+        </details>
+      </article>
+      <div class="stack">
+        <article class="job" style="--h:var(--c1);--hs:var(--c1s)">
+          <div class="co"><h3>Carbon Finance</h3><span class="when">Apr – Oct 2022</span></div>
+          <h4>Fraud Analyst</h4>
+          <ul><li>Analysed loan applications and disbursements daily, and reviewed NPL accounts for fraudulent disbursements.</li><li>Produced suspicious activity reports and recommended rule and tooling improvements.</li></ul>
+        </article>
+        <article class="job" style="--h:var(--c3);--hs:var(--c3s)">
+          <div class="co"><h3>Newedge Finance</h3><span class="when">2020 – 2022</span></div>
+          <h4>Team Lead, Fraud Risk &amp; Investigation</h4>
+          <ul><li>Led a team of 60+ fraud investigators, 120 at peak.</li><li>Assigned case investigations and ran weekly training on fraud trends.</li><li>Analysed call data for fraud patterns and delivered AML training.</li></ul>
+        </article>
+        <article class="job" style="--h:var(--c4);--hs:var(--c4s)">
+          <div class="co"><h3>Transnet Financial</h3><span class="when">2019 – 2020</span></div>
+          <h4>Fraud Investigator → QA Specialist</h4>
+          <ul><li>Investigated synthetic identities, forged documents and fraud syndicates.</li><li>Built QA frameworks and SOPs for investigations.</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="expertise">
+  <div class="inner">
+    <div class="sec-head"><span class="eyebrow">Expertise</span><h2>What I bring to a team</h2></div>
+    <div class="skills">
+      <div class="skill" style="--hs:var(--c1s)"><b>Fraud strategy &amp; controls</b><p>Frameworks, rules and typologies built from real case evidence.</p></div>
+      <div class="skill" style="--hs:var(--c2s)"><b>Investigations</b><p>Complex, high-risk cases taken from first alert to final action.</p></div>
+      <div class="skill" style="--hs:var(--c3s)"><b>AML / CFT &amp; reporting</b><p>CTR, STR and SAR filing, renditions and audit-ready records.</p></div>
+      <div class="skill" style="--hs:var(--c4s)"><b>KYC &amp; identity fraud</b><p>Biometrics, document fraud and synthetic identities.</p></div>
+      <div class="skill" style="--hs:var(--c5s)"><b>Fraud analytics</b><p>SQL, dashboards and monthly risk reporting to leadership.</p></div>
+      <div class="skill" style="--hs:var(--paper)"><b>Policy &amp; leadership</b><p>Fraud policy, SOPs, regulator engagement and team building.</p></div>
+    </div>
+    <div class="creds">
+      <div class="cred"><span class="badge" style="background:var(--c2)">CFE</span><div><b>Certified Fraud Examiner</b><span>Association of Certified Fraud Examiners</span></div></div>
+      <div class="cred"><span class="badge" style="background:var(--c5)">B.Ed</span><div><b>Educational Management</b><span>University of Ilorin, 2012 – 2016</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band contact" id="contact" style="padding-top:0">
+  <div class="inner">
+    <div class="box">
+      <span class="blob" style="width:220px;height:220px;background:var(--c1);right:-60px;top:-70px" aria-hidden="true"></span>
+      <span class="blob" style="width:140px;height:140px;background:var(--c3);right:120px;top:-50px" aria-hidden="true"></span>
+      <div>
+        <h2>Let's make fraud expensive.</h2>
+        <p>Open to senior roles in fraud risk management, fraud strategy, financial crime and fraud operations leadership across fintech, digital lending and financial services, in Nigeria or remote.</p>
+      </div>
+      <div class="rows">
+        <div class="crow"><span class="l">Email</span><a class="v" id="v-email" href="mailto:olasubomiafonja@gmail.com">olasubomiafonja@gmail.com</a><button type="button" data-copy="olasubomiafonja@gmail.com">Copy</button></div>
+        <div class="crow"><span class="l">Phone</span><a class="v" href="tel:+2348166720801">+234 816 672 0801</a><button type="button" data-copy="+2348166720801">Copy</button></div>
+        <div class="crow"><span class="l">CV</span><a class="v" href="Olasubomi-Afonja-CV.pdf" download>Download my CV (PDF) ↓</a></div>
+        <div class="crow"><span class="l">LinkedIn</span><a class="v" href="https://linkedin.com/in/olasubomi-afonja" target="_blank" rel="noopener">in/olasubomi-afonja ↗</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="band"><div class="inner"><span>© 2026 Olasubomi Afonja, CFE</span><span>Mock visuals · illustrative code · rounded figures</span></div></footer>
+
+<script>
+(function(){
+  // theme toggle
+  var root=document.documentElement;
+  try{var saved=localStorage.getItem('oa-theme'); if(saved) root.setAttribute('data-theme',saved);}catch(e){}
+  document.getElementById('theme').addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme');
+    if(!cur){cur=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}
+    var nx=cur==='dark'?'light':'dark'; root.setAttribute('data-theme',nx);
+    try{localStorage.setItem('oa-theme',nx);}catch(e){}
+  });
+
+  // copy buttons
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var t=b.getAttribute('data-copy');
+      function ok(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy'},1500)}
+      try{navigator.clipboard.writeText(t).then(ok,function(){b.textContent=t})}catch(e){b.textContent=t}
+    });
+  });
+
+  // deck
+  var deck=document.getElementById('deck'), cards=[].slice.call(deck.querySelectorAll('.card'));
+  var tabs=document.getElementById('tabs'), counter=document.getElementById('counter');
+  var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var order=cards.map(function(_,i){return i}), busy=false;
+  var POS=['translate3d(0,0,0)','translate3d(0,22px,0) scale(.965) rotate(1.2deg)','translate3d(0,42px,0) scale(.93) rotate(-1.4deg)','translate3d(0,60px,0) scale(.9) rotate(.8deg)','translate3d(0,76px,0) scale(.87)'];
+  cards.forEach(function(c,i){
+    var b=document.createElement('button'); b.type='button'; b.className='tab'; b.setAttribute('role','tab');
+    b.setAttribute('style',c.getAttribute('style'));
+    b.innerHTML='<span class="n">0'+(i+1)+'</span><span class="t">'+c.dataset.title+'</span>';
+    b.addEventListener('click',function(){goTo(i)}); tabs.appendChild(b);
+  });
+  var tabBtns=[].slice.call(tabs.children);
+  function layout(){
+    order.forEach(function(ci,d){
+      var c=cards[ci]; c.style.zIndex=String(10-d); c.style.transform=POS[Math.min(d,POS.length-1)];
+      c.classList.toggle('front',d===0);
+      if(d===0){c.removeAttribute('inert');c.removeAttribute('aria-hidden')}else{c.setAttribute('inert','');c.setAttribute('aria-hidden','true')}
+    });
+    tabBtns.forEach(function(t,i){t.setAttribute('aria-selected',String(i===order[0]))});
+    counter.innerHTML='0'+(order[0]+1)+' <span>/ 0'+cards.length+'</span>';
+  }
+  function next(){
+    if(busy) return;
+    var front=cards[order[0]];
+    if(reduce){order.push(order.shift());layout();return}
+    busy=true; front.style.zIndex='20';
+    front.style.transform='translate3d(62%,-24px,0) rotate(9deg)';
+    setTimeout(function(){order.push(order.shift());layout();setTimeout(function(){busy=false},420)},340);
+  }
+  function prev(){
+    if(busy) return;
+    var ci=order.pop(); order.unshift(ci); var c=cards[ci];
+    if(reduce){layout();return}
+    busy=true; c.style.transition='none'; c.style.zIndex='20'; c.style.transform='translate3d(-62%,-24px,0) rotate(-9deg)';
+    void c.offsetWidth; c.style.transition='';
+    layout(); setTimeout(function(){busy=false},560);
+  }
+  function goTo(i){ if(busy||order[0]===i) return; if(order[1]===i){next();return} while(order[0]!==i){order.push(order.shift())} layout(); }
+  deck.addEventListener('click',function(e){
+    var c=e.target.closest('.card'); if(!c||!c.classList.contains('front')) return;
+    if(e.target.closest('a,button,summary,details,pre,input,label')) return;
+    if(getSelection&&String(getSelection()).length) return;
+    next();
+  });
+  deck.addEventListener('keydown',function(e){if(e.key==='ArrowRight'){e.preventDefault();next()}else if(e.key==='ArrowLeft'){e.preventDefault();prev()}});
+  document.getElementById('next').addEventListener('click',next);
+  document.getElementById('prev').addEventListener('click',prev);
+
+  function sizeDeck(){var f=cards[order[0]]; f.style.height='auto'; var h=f.offsetHeight; cards.forEach(function(c){if(c!==f){c.style.height=h+'px'}});}
+  var _layout=layout; layout=function(){_layout(); sizeDeck();};
+  window.addEventListener('resize',function(){sizeDeck()});
+  deck.addEventListener('toggle',function(){sizeDeck()},true);
+  document.querySelectorAll('[data-snaps]').forEach(function(box){
+    var btns=[].slice.call(box.querySelectorAll('.snap-tabs button')), screens=[].slice.call(box.querySelectorAll('.screen')), url=box.querySelector('[data-url]');
+    btns.forEach(function(b,i){b.addEventListener('click',function(){
+      btns.forEach(function(x,j){x.setAttribute('aria-selected',String(i===j))});
+      screens.forEach(function(sc,j){sc.hidden=(i!==j)});
+      if(url) url.textContent=screens[i].getAttribute('data-path');
+      sizeDeck();
+    })});
+  });
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(sizeDeck)}
+  layout();
+
+  // simulator (mock pairs)
+  var PAIRS=[{s:.97,f:1},{s:.93,f:1},{s:.89,f:1},{s:.80,f:0},{s:.78,f:1},{s:.71,f:0},{s:.58,f:0},{s:.40,f:0}];
+  var th=document.getElementById('th'), pairsEl=document.getElementById('pairs');
+  PAIRS.forEach(function(p,i){var d=document.createElement('div');d.innerHTML='<span class="lab">Pair '+(i+1)+'</span><b>'+p.s.toFixed(2)+'</b><span class="lab">'+(p.f?'Fraud':'Genuine')+'</span>';pairsEl.appendChild(d)});
+  function sim(){
+    var t=parseFloat(th.value), caught=0, missed=0, fp=0;
+    document.getElementById('thv').textContent=t.toFixed(2);
+    PAIRS.forEach(function(p,i){var el=pairsEl.children[i], flag=p.s>=t; el.className='';
+      if(flag&&p.f){caught++;el.className='hit-f'} else if(flag&&!p.f){fp++;el.className='hit-g'} else if(!flag&&p.f){missed++;el.className='miss'}});
+    document.getElementById('o-caught').textContent=caught;
+    document.getElementById('o-missed').textContent=missed;
+    document.getElementById('o-false').textContent=fp;
+    var v= fp>=2 ? 'Too strict: genuine customers are being blocked. That costs trust, complaints and good loans.'
+         : missed>=2 ? 'Too loose: fraud is getting through. Every miss is a loan that won\'t be repaid.'
+         : 'A good balance for this sample. There\'s rarely a perfect number, so you trade one missed fraud against one blocked customer. In practice I settle it with hundreds of reviewed cases.';
+    document.getElementById('verdict').textContent=v;
+  }
+  th.addEventListener('input',sim); sim();
+})();
+</script>
+
+</body>
+</html>
